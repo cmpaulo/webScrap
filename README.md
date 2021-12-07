@@ -36,9 +36,9 @@ Database formed by information in OLX Brasil website advertisements.
 
 The code is with variables and comments in Portuguese, and the search for advertisements is carried out with words in the Portuguese language.
 
-![graph number](/images/median_price_of_bike.png)
+![graphnumber](/images/median_price_of_bike.png )
 
-![graph number 1](/images/number_of_ads_bycity.png)
+![graph1](/images/number_of_ads_bycity.png )
 
 ## References
 ![(https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website/](https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website/)

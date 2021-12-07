@@ -38,7 +38,7 @@ The code is with variables and comments in Portuguese, and the search for advert
 
 ![graphnumber](/images/median_price_of_bike.png )
 
-![graph1](/images/number_of_ads_bycity.png )
+<!-- ![graph1](/images/number_of_ads_bycity.png ) -->
 
 ## References
 ![(https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website/](https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website/)

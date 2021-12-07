@@ -11,7 +11,7 @@ The export of information to a structured database (Pandas DataFrame) where the 
 
 - How to automate the search for related words in OLX ads.
 
-- Can I use quantile analysis to find the best product at the best price?
+- Can I use quartile analysis to find the best product at the best price?
 
 
 ## Our Plan

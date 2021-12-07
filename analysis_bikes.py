@@ -59,6 +59,8 @@ ax.set_xticklabels(np.arange(0,int(means.values.max())+1000,500))
 ax.set_ylim(means.index[0],means.index[-1])
 ax.set_yticklabels(means.index,rotation=0)
 plt.tight_layout()
+plt.savefig("./images/median_price_of_bike.png")
+
 # plt.show()
 # print dos valores
 # print(dataK.groupby('cidade').mean().sort_values('precoBike',ascending=False))
@@ -79,6 +81,9 @@ ax.set_xticklabels(np.arange(0,counts_anuncios.values.max()+6,2))
 ax.set_yticklabels(counts_anuncios.index,rotation=0)
 plt.tight_layout()
 plt.show()
+plt.savefig("./images/number_of_ads_bycity.png")
+
+
 
 # print(dataK.sort_values(['diapostagem','precoBike'],ascending=False)[['diapostagem','nomeBike','urlBike']].values)
 # print(dataK.loc[dataK.cidade == "Osasco",'urlBike'].values)

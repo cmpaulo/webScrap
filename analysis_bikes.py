@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -5,7 +7,7 @@ import matplotlib.pyplot as plt
 # [PR,SC,SP,RS]
 data = pd.read_csv('dados_bike_regiaoSUL.csv', index_col='Unnamed: 0')
 
-# print('removendo duplicadas \n')
+# print('removendo duplicadas \n e valores nan')
 data = data.drop_duplicates(keep='last').dropna()
 
 data.reset_index(inplace=True,drop=True)
@@ -15,18 +17,12 @@ related_word_upper = [w.upper() for w in related_word]
 related_word_cap = [w.capitalize() for w in related_word]
 related_words = set(related_word).union(set(related_word_cap).union(set(related_word_upper)) ) 
 related_words = sorted(related_words)
-# keyword_list = ["rolo", "powertap" ,"mtb", "south", "mountain","ivtec","porta-malas","cadeado","eletrica","elétrica", 
-                # "motor", "infantil", "suporte","suspensão","marchas","wild","velocidades",
-                # "malas","criança", "dobrável","ergométrica"]
 
 
 for i in data.index:
-    # if any(word in data['nomeBike'][i] for word in keyword_list):
-    #     data.drop(i, inplace=True)
     if any(word_i in data['nomeBike'][i] for word_i in related_words):
         continue
     else:
-        # print(i, data['nomeBike'][i])
         data.drop(i, inplace=True)
 
 data.reset_index(inplace=True,drop=True)
@@ -44,8 +40,8 @@ dataK = data[(data['precoBike'] > 400) & (data['precoBike'] < 3500)]
 plt.figure(figsize=(10, 7))
 ax = plt.axes()
 means = dataK.groupby('cidade').mean().sort_values('precoBike',ascending=False)['precoBike']
-ax.barh(means.index, means.values, label='Média de preço por cidade das bike fixa na Região Sul')
-ax.axvline(means.mean(), color = 'red',ls = 'dashed', label='Valor médio na Região Sul')
+ax.barh(means.index, means.values)
+ax.axvline(means.mean(), color = 'red',ls = 'dashed', label='Preço médio na Região Sul')
 ax.set_title('Valor médio para as bicicletas fixa nas cidades da Região Sul')
 
 # dataK.groupby('cidade').median().sort_values('precoBike',ascending=False).plot(); plt.tight_layout()
@@ -57,7 +53,8 @@ ax.set_xlabel('Média de preço [R$]')
 ax.set_xlim(0,int(means.values.max())+500)
 ax.set_xticklabels(np.arange(0,int(means.values.max())+1000,500))
 ax.set_ylim(means.index[0],means.index[-1])
-ax.set_yticklabels(means.index,rotation=0)
+ax.set_yticklabels(means.index)
+plt.legend()
 plt.tight_layout()
 plt.savefig("./images/median_price_of_bike.png")
 
@@ -80,8 +77,8 @@ ax.set_ylim(counts_anuncios.index[0],counts_anuncios.index[-1])
 ax.set_xticklabels(np.arange(0,counts_anuncios.values.max()+6,2))
 ax.set_yticklabels(counts_anuncios.index,rotation=0)
 plt.tight_layout()
-plt.show()
 plt.savefig("./images/number_of_ads_bycity.png")
+plt.show()
 
 
 

@@ -2,7 +2,7 @@
 
 <!-- ingles -->
 
-# WebScraping frist step.
+# WebScraping first step.
 
 ## Authors: Paulo, Claudio M. 
 

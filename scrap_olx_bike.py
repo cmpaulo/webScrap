@@ -1,9 +1,4 @@
-# from selenium import webdriver
-# from webdriver_manager.chrome import ChromeDriverManager
-
-# driver = webdriver.Chrome(ChromeDriverManager().install())
-# driver.get('http://www.ebay.com')
-
+#!/usr/bin/python
 
 import numpy as np
 import pandas as pd
@@ -14,6 +9,7 @@ from datetime import date
 # https://sp.olx.com.br/ciclismo?q=bike%20fixa
 # https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo?q=bike%20fixa
 # https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo?o=2&q=bike%20fixa
+
 # Obtém a URL
 # palavras para buscar [Airwalk, RAF, 8Bike, Nexus, Vicinitech, Tetrapode]
 def buscarDadosOLX(pages = 2,estado= "SP", regiao = "11", palavra = "fixa"):

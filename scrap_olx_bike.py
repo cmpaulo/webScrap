@@ -20,7 +20,7 @@ def buscarDadosOLX(pages = 2,estado= "SP", regiao = "11", palavra = "fixa"):
         url = f"https://{estado}.olx.com.br/ciclismo?q={palavra}&sf=1"
 
     else:
-        url = f"https://{uf[estado]}.olx.com.br/{regiaoBuscar[regiao]}/ciclismo?q={palavra}&sf=1"
+        url = f"https://{estado}.olx.com.br/{regiaoBuscar[regiao]}/ciclismo?q={palavra}&sf=1"
         
     PARAMS = {
         "authority" : "pr.olx.com.br",
@@ -65,6 +65,7 @@ def buscarDadosOLX(pages = 2,estado= "SP", regiao = "11", palavra = "fixa"):
                     diaPostagem = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[0].contents[0]
                     horaPostagem = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[1].contents[0]
                     urlBike = item.find('a')['href']
+                    codAnuncio = urlBike.split('-')[-1]
                     localiza = item.find_all("span", class_="sc-7l84qu-1 ciykCV sc-ifAKCX dpURtf")[0].contents[0]
                     
                     try:
@@ -75,19 +76,19 @@ def buscarDadosOLX(pages = 2,estado= "SP", regiao = "11", palavra = "fixa"):
                         cidade = localiza
                         bairro = ' '
                 
-                    listaAnuncios.append([diaPostagem,horaPostagem,nomeBike,precoBike,cidade,bairro,urlBike])
+                    listaAnuncios.append([diaPostagem,horaPostagem,codAnuncio,nomeBike,precoBike,cidade,bairro,urlBike])
                 except:
-                    print(["ERRO"])
-                    listaAnuncios.append(np.ones(7)*np.nan )
+                    print("item não identificado como anuncio")
+                    listaAnuncios.append(np.ones(8)*np.nan )
         
-    name = ['diapostagem', 'hora','nomeBike','precoBike','cidade','bairro','urlBike']
+    name = ['diapostagem', 'hora','codigo','nomeBike','precoBike','cidade','bairro','urlBike']
     data = pd.DataFrame(listaAnuncios, columns=name)
         # data.to_csv(f'dados_bike_{estado}_{regiao}.csv')
     return data
 
 datai = pd.DataFrame()
 for i in ['SP','PR',"SC","RS"]:
-    for j in ['raf','8bike','8Bike', 'nexus','tetrapode' ,'cernunnos','fixed','riva', 'gear','cinelli','single','bike%20fixa']:
+    for j in ['raf','8bike','8Bike', 'nexus','tetrapode' ,'cernunnos','fixed','riva','cinelli','single','bike%20fixa']:
         reg = "0"
         datai = datai.append(buscarDadosOLX(2, estado = i, regiao = reg, palavra = j))
     

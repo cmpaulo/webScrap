@@ -12,12 +12,12 @@ data = data.drop_duplicates(keep='last').dropna()
 
 data.reset_index(inplace=True,drop=True)
 
-related_word = ['raf','8bike','8Bike', 'nexus', 'tetrapode','cernunnos','fixed','gear','riva','cinelli','single','fixa']
+
+related_word = ['raf','8bike','8Bike', 'nexus', 'tetrapode','cernunnos','fixed','riva','cinelli','single','fixa']
 related_word_upper = [w.upper() for w in related_word]
 related_word_cap = [w.capitalize() for w in related_word]
 related_words = set(related_word).union(set(related_word_cap).union(set(related_word_upper)) ) 
 related_words = sorted(related_words)
-
 
 for i in data.index:
     if any(word_i in data['nomeBike'][i] for word_i in related_words):
@@ -30,11 +30,10 @@ data.reset_index(inplace=True,drop=True)
 # clean data
 # data.to_csv('dados_bike_BR_clean.csv')
 
-dataK = data[(data['precoBike'] > 400) & (data['precoBike'] < 3500)]
-# plot
-# plt.boxplot(dataK['precoBike']); plt.tight_layout(); plt.show()
+metrica = plt.boxplot(data['precoBike'])
+captop = metrica['caps'][1].get_ydata()[0]
+dataK = data[(data['precoBike'] > 400) & (data['precoBike'] < captop)]
 
-# 
 # print(dataK.loc[:,['diapostagem','nomeBike', 'precoBike', 'cidade', 'urlBike']].sort_values(['diapostagem','precoBike'],ascending=False))
 # plot
 plt.figure(figsize=(10, 7))
@@ -56,7 +55,7 @@ ax.set_ylim(means.index[0],means.index[-1])
 ax.set_yticklabels(means.index)
 plt.legend()
 plt.tight_layout()
-plt.savefig("./images/median_price_of_bike.png")
+# plt.savefig("./images/median_price_of_bike.png")
 
 # plt.show()
 # print dos valores
@@ -75,12 +74,12 @@ ax.set_xlabel('Número de anúncios')
 ax.set_xlim(0,counts_anuncios.values.max()+4)
 ax.set_ylim(counts_anuncios.index[0],counts_anuncios.index[-1])
 ax.set_xticklabels(np.arange(0,counts_anuncios.values.max()+6,2))
-ax.set_yticklabels(counts_anuncios.index,rotation=0)
+ax.set_yticklabels(counts_anuncios.index)
 plt.tight_layout()
-plt.savefig("./images/number_of_ads_bycity.png")
+# plt.savefig("./images/number_of_ads_bycity.png")
 plt.show()
 
 
 
 # print(dataK.sort_values(['diapostagem','precoBike'],ascending=False)[['diapostagem','nomeBike','urlBike']].values)
-# print(dataK.loc[dataK.cidade == "Osasco",'urlBike'].values)
+print(dataK.loc[dataK.cidade == "Porto Alegre",['diapostagem','urlBike']].values)

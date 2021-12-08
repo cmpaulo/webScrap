@@ -35,6 +35,10 @@ Data scraping was carried out and the database was created to analyze the averag
 Database formed by information in OLX Brasil website advertisements.
 
 The code is with variables and comments in Portuguese, and the search for advertisements is carried out with words in the Portuguese language.
+## Conclusions
+
+The data obtained allows answers to questions with a graphic presentation of the average value of bicycles per city.
+
 
 ![graphnumber](/images/median_price_of_bike.png)
 
@@ -42,4 +46,4 @@ The code is with variables and comments in Portuguese, and the search for advert
 ![graph1](/images/number_of_ads_bycity.png)
 
 ## References
-![Freecodecamp.org - Web scraping python tutorial](https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website/)
+![Freecodecamp.org - Web scraping python tutorial](https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website)

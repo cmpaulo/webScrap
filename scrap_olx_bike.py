@@ -4,15 +4,14 @@ import numpy as np
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from datetime import date
 
 # https://sp.olx.com.br/ciclismo?q=bike%20fixa
 # https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo?q=bike%20fixa
 # https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo?o=2&q=bike%20fixa
-
+# melhora o try para obter mais resultados.
 # Obtém a URL
 # palavras para buscar [Airwalk, RAF, 8Bike, Nexus, Vicinitech, Tetrapode]
-def buscarDadosOLX(pages = 2,estado= "SP", regiao = "11", palavra = "fixa"):
+def buscarDadosOLX(estado= "SP", regiao = "11", palavra = "fixa"):
     regiaoBuscar = {"0":"","11":"sao-paulo-e-regiao"}
     listaAnuncios = []
     estado = estado.lower()
@@ -38,7 +37,7 @@ def buscarDadosOLX(pages = 2,estado= "SP", regiao = "11", palavra = "fixa"):
     soup = BeautifulSoup(page.content, 'lxml')
     # dicanuncios = {'diapostagem':[], 'hora':[],'nomedoVeiculo':[],'precoVeiculo':[],'kmrodado':[],'Cambio':[],'combustivel':[],'cidade':[],'bairro':[],'url':[]}
     nResultadosBusca = soup.find_all("span", class_="sc-1mi5vq6-0 eDXljX sc-ifAKCX fhJlIo")[0].contents[0]
-    print(nResultadosBusca)
+
     if len(nResultadosBusca) > 20:
         try:
             if 'resultados' in nResultadosBusca:
@@ -60,15 +59,26 @@ def buscarDadosOLX(pages = 2,estado= "SP", regiao = "11", palavra = "fixa"):
             for item in itens.find_all("li"):
                 try:
                     nomeBike = item.find_all('h2')[0].contents[0]
-                    precoBike = item.find_all("span", class_="sc-ifAKCX eoKYee")[0].contents[0].split("R$")[1].replace('.','')
-                    precoBike = float(precoBike)
-                    diaPostagem = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[0].contents[0]
-                    horaPostagem = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[1].contents[0]
-                    urlBike = item.find('a')['href']
-                    codAnuncio = urlBike.split('-')[-1]
-                    localiza = item.find_all("span", class_="sc-7l84qu-1 ciykCV sc-ifAKCX dpURtf")[0].contents[0]
-                    
                     try:
+                        precoBike = item.find_all("span", class_="sc-ifAKCX eoKYee")[0].contents[0].split("R$")[1].replace('.','')
+                        precoBike = float(precoBike)
+                    except:
+                        precoBike = np.nan
+                    try:
+                        diaPostagem = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[0].contents[0]
+                    except:
+                        diaPostagem = np.nan
+                    try:
+                        horaPostagem = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[1].contents[0]
+                    except:
+                        horaPostagem = np.nan
+                    try:
+                        urlBike = item.find('a')['href']
+                        codAnuncio = urlBike.split('-')[-1]
+                    except:
+                        codAnuncio = np.nan
+                    try:
+                        localiza = item.find_all("span", class_="sc-7l84qu-1 ciykCV sc-ifAKCX dpURtf")[0].contents[0]
                         locais = localiza.split(',')
                         cidade = locais[0]
                         bairro = locais[1]
@@ -76,23 +86,41 @@ def buscarDadosOLX(pages = 2,estado= "SP", regiao = "11", palavra = "fixa"):
                         cidade = localiza
                         bairro = ' '
                 
-                    listaAnuncios.append([diaPostagem,horaPostagem,codAnuncio,nomeBike,precoBike,cidade,bairro,urlBike])
+                    try:
+                        # get distance form initialcep of street to cep of ad.
+                        page2 = requests.get(url=urlBike, headers=PARAMS)
+                        soupsp = BeautifulSoup(page2.content, 'lxml')
+                        cep = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[0].contents[0]
+                    except:
+                        cep = np.nan
+
+                    listaAnuncios.append([diaPostagem,horaPostagem,codAnuncio,nomeBike,precoBike,cidade,bairro,cep,urlBike])
                 except:
-                    print("item não identificado como anuncio")
-                    listaAnuncios.append(np.ones(8)*np.nan )
+                    print("Item não identificado como anuncio.")
+                    listaAnuncios.append(np.ones(9)*np.nan )
         
-    name = ['diapostagem', 'hora','codigo','nomeBike','precoBike','cidade','bairro','urlBike']
+    name = ['diapostagem', 'hora','codigo','nomeBike','precoBike','cidade','bairro','cep','urlBike']
     data = pd.DataFrame(listaAnuncios, columns=name)
         # data.to_csv(f'dados_bike_{estado}_{regiao}.csv')
     return data
 
+
+# Referência de busca: fixie, barra forte,bike urbana, urban bike, single speed, bike speed, colossi, 8bike, fuji, trek, cannondale, specialized, Night Riders, 
+# Specialized Langster, Caloi, Aço Hi-ten, aro 700. 
+# btwin, focus, pinarello, Soul, sundown, vicinitech, gancheira horizontal, gancheira pista, aventon, miyamura, sugino, dura Ace, shimano, chandan, Raf bikes, caloi 10, caloi 12, monark 10, peugeot 10, giant, audax, tsw, groove, oggi, riva, cernnunos, república, Ferroveló, caixinha, caixa, sunburst, airwalk, black flea, ColorBikes, eight bikes, nirve belmont, Eagle bikes, foffa, cubos rolamentados, flip flop, contra pedal, quadro fixa, bicicleta.
+    # for j in ['raf','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single','bike%20fixa']:
+
 datai = pd.DataFrame()
-for i in ['SP','PR',"SC","RS"]:
-    for j in ['raf','8bike','8Bike', 'nexus','tetrapode' ,'cernunnos','fixed','riva','cinelli','single','bike%20fixa']:
+
+# for i in ["SP","PR","SC","RS"]:
+# buscar bicicleta que foram roubadas pelo nome do anuncio, selecionar as bicicletas que estão com o valor abaixo da média onde poderia estar anunciada a bicicleta que foi roubada.
+for i in ["SP"]:
+    for j in ['sunburst','hotdog','bike%20fixa','bicicleta%20fixa']:
+        print(j)
         reg = "0"
-        datai = datai.append(buscarDadosOLX(2, estado = i, regiao = reg, palavra = j))
+        datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))
     
-datai.to_csv(f'dados_bike_regiaoSUL.csv')
+datai.to_csv(f'dados_bike_busca_sunburst.csv')
 print(datai)
 
 print("Fim!")

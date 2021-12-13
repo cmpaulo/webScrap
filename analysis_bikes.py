@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # [PR,SC,SP,RS]
-data = pd.read_csv('dados_bike_regiaoSUL.csv', index_col='Unnamed: 0')
+data = pd.read_csv('dados_bike_busca_sunburst.csv', index_col='Unnamed: 0')
 
 # print('removendo duplicadas \n e valores nan')
 data = data.drop_duplicates(keep='last').dropna()
@@ -13,7 +13,9 @@ data = data.drop_duplicates(keep='last').dropna()
 data.reset_index(inplace=True,drop=True)
 
 
-related_word = ['raf','8bike','8Bike', 'nexus', 'tetrapode','cernunnos','fixed','riva','cinelli','single','fixa']
+# related_word = ['raf','8bike','8Bike', 'nexus', 'tetrapode','cernunnos','fixed','riva','cinelli','single','fixa']
+related_word = ['fixed','fixie','single','fixa','sunburst', 'peugeot','hotdog', 'simples']
+
 related_word_upper = [w.upper() for w in related_word]
 related_word_cap = [w.capitalize() for w in related_word]
 related_words = set(related_word).union(set(related_word_cap).union(set(related_word_upper)) ) 
@@ -82,4 +84,8 @@ plt.show()
 
 
 # print(dataK.sort_values(['diapostagem','precoBike'],ascending=False)[['diapostagem','nomeBike','urlBike']].values)
-print(dataK.loc[dataK.cidade == "Porto Alegre",['diapostagem','urlBike']].values)
+mm = means[means.values < means.mean()]
+for jj in mm.index[::-1]:
+    print('cidade: ', jj)
+    print(dataK.loc[dataK.cidade == jj,['diapostagem','urlBike']].values)
+    print(' ______________________________________________')

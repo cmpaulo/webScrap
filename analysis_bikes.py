@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
 # [PR,SC,SP,RS]
@@ -14,7 +14,7 @@ data.reset_index(inplace=True,drop=True)
 
 
 # related_word = ['raf','8bike','8Bike', 'nexus', 'tetrapode','cernunnos','fixed','riva','cinelli','single','fixa']
-related_word = ['fixed','fixie','single','fixa','sunburst', 'peugeot','hotdog', 'simples']
+related_word = ['fixed','fixie','single','fixa','sunburst','hotdog', 'simples']
 
 related_word_upper = [w.upper() for w in related_word]
 related_word_cap = [w.capitalize() for w in related_word]

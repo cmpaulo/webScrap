@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
+from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
 
 # https://sp.olx.com.br/ciclismo?q=bike%20fixa
 # https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo?q=bike%20fixa

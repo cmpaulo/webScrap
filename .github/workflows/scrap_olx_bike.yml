@@ -26,6 +26,9 @@ jobs:
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run: python scrap_olx_bike.py
+      
+      - name: execute py script
+        run: python analysis_bikes.py
           
       - name: commit files
         run: |

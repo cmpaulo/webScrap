@@ -81,9 +81,6 @@ plt.tight_layout()
 plt.savefig("./images/number_of_ads_bycity.png")
 # plt.show()
 
-
-
-# print(dataK.sort_values(['diapostagem','precoBike'],ascending=False)[['diapostagem','nomeBike','urlBike']].values)
 mm = means[means.values < means.mean()]
 for jj in mm.index[::-1]:
     print('cidade: ', jj)

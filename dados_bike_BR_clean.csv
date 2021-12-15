@@ -1,134 +1,41 @@
-,diapostagem,hora,nomeBike,precoBike,cidade,bairro,urlBike
-0,8 nov,09:22,"Bike Fixa/Roda Livre RAF, aro 30mm, quadro em cromoly 54/56",1450.0,Jales, Jardim Pêgolo - DDD 17,https://sp.olx.com.br/regiao-de-sao-jose-do-rio-preto/ciclismo/bike-fixa-roda-livre-raf-aro-30mm-quadro-em-cromoly-54-56-954013211
-1,7 nov,11:34,Bicicleta single speed Raf Bikes,1600.0,Campinas, Vila Aeroporto III - DDD 19,https://sp.olx.com.br/grande-campinas/ciclismo/bicicleta-single-speed-raf-bikes-953759877
-2,6 nov,18:44,Quadro e garfo fixa 8Bike TAM 53,776.0,São Paulo, Jardim Paulista - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/quadro-e-garfo-fixa-8bike-tam-53-953621087
-3,2 dez,15:33,Bike urbana 26  Shimano Nexus 8 ,1900.0,Sorocaba, Vila Assis - DDD 15,https://sp.olx.com.br/regiao-de-sorocaba/ciclismo/bike-urbana-26-shimano-nexus-8-964418794
-4,24 nov,14:27,Freio Nexus Shimano ,190.0,São Paulo, Alto da Lapa - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/freio-nexus-shimano-960933989
-5,18 nov,13:01,Kit Nexus Inter 3 P/ V-brake Completo 3v Cubo Marcha Interna,300.0,Santos, Castelo - DDD 13,https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/kit-nexus-inter-3-p-v-brake-completo-3v-cubo-marcha-interna-939012895
-6,18 nov,14:53,Bicicleta speed fixa aro 700,1100.0,São Paulo, Vila Clementino - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-speed-fixa-aro-700-953328294
-7,16 nov,22:43,"Aros 40mm originais da Raf. Fixa, fixed gear, fixie, speed, pinhão fixo.   ",400.0,São Paulo, Cerqueira César - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/aros-40mm-originais-da-raf-fixa-fixed-gear-fixie-speed-pinhao-fixo-957665673
-8,11 nov,10:43,Bicicleta 29 ELleven Gear 21 velocidades cinza/preto,1790.0,Hortolândia, Parque Ortolândia - DDD 19,https://sp.olx.com.br/grande-campinas/ciclismo/bicicleta-29-elleven-gear-21-velocidades-cinza-preto-955564125
-9,18 nov,19:13,Quadro Masil TT e frente Cinelli em 12x sem juros,3290.0,São Bernardo do Campo, Rudge Ramos - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/quadro-masil-tt-e-frente-cinelli-em-12x-sem-juros-958547895
-10,18 nov,13:10,"Guidão BullHorn Cinelli Lola 31,8mm",180.0,Campinas, Parque Jambeiro - DDD 19,https://sp.olx.com.br/grande-campinas/ciclismo/guidao-bullhorn-cinelli-lola-31-8mm-958356191
-11,14 nov,11:09,Banco/Selim Cinelli Scatto para bicicleta/bike,150.0,São Paulo, Vila Lageado - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/banco-selim-cinelli-scatto-para-bicicleta-bike-956719167
-12,12 nov,11:21,guidao cinelli pepper ,200.0,São Paulo, Bela Vista - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/guidao-cinelli-pepper-956026626
-13,Ontem,11:07,Mtb e single pelo preço de uma ,4675.0,São José dos Campos, Jardim Bela Vista - DDD 12,https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/mtb-e-single-pelo-preco-de-uma-965644286
-14,5 dez,15:31,Bike single speed azul celeste 17,1200.0,Santo André, Parque João Ramalho - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-single-speed-azul-celeste-17-964866678
-15,5 dez,12:26,Bicicleta fixa / single speed,1200.0,Diadema, Taboão - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-single-speed-962110804
-16,2 dez,15:31,Caloi 10 Com Sti Tourney tam. 54 - Aceito Troca Singlespeed,2750.0,São Paulo, Carandiru - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/caloi-10-com-sti-tourney-tam-54-aceito-troca-singlespeed-944405263
-17,2 dez,13:02,Bike single recem reformada,630.0,Ribeirão Preto, Vila Tibério - DDD 16,https://sp.olx.com.br/regiao-de-ribeirao-preto/ciclismo/bike-single-recem-reformada-964308938
-18,28 nov,16:50,Caloi 10 Vintage Single Speed,1300.0,Campinas, Jardim Monte Líbano - DDD 19,https://sp.olx.com.br/grande-campinas/ciclismo/caloi-10-vintage-single-speed-962490475
-19,25 nov,14:28,Caloi single ,600.0,Osasco, Rochdale - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/caloi-single-961415873
-20,17 nov,17:24,Bike single speed Caloi 10,800.0,São Paulo, Vila Cosmopolita - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-single-speed-caloi-10-958026367
-21,Ontem,23:59,Bike Fixa Fuji Feather linda,3900.0,São Paulo, Boaçava - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-fuji-feather-linda-965945433
-22,Ontem,20:01,Pinhão 17 dentes (com rosca) para bike Fixa.,40.0,São Paulo, Butantã - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/pinhao-17-dentes-com-rosca-para-bike-fixa-959841605
-23,Ontem,17:52,Bike fixa,1400.0,São Paulo, Belenzinho - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-965831193
-24,Ontem,16:24,Bikw fixa Kombat,1800.0,Caieiras, Serpa - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bikw-fixa-kombat-965798408
-25,Ontem,06:22,Bike fixa night riders,750.0,São Paulo, Bom Retiro - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-night-riders-965556850
-26,5 dez,17:38,Manopla Punho Bike Espuma Gel Silicone MTB Fixa ,25.0,São Paulo, Bela Vista - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/manopla-punho-bike-espuma-gel-silicone-mtb-fixa-965457398
-27,5 dez,12:38,Bike Fixa RAF Sprinter (troco por MTB 29),3000.0,São Paulo, Jardim Marabá - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-raf-sprinter-troco-por-mtb-29-965382970
-28,5 dez,08:48,"Caloi / monark 10 fixa , single ",750.0,Praia Grande, Vila Sônia - DDD 13,https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/caloi-monark-10-fixa-single-965327133
-29,4 dez,09:13,Bike fixa kombat Tamanho 52,2400.0,São Paulo, Brasilândia - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-kombat-tamanho-52-965069530
-30,3 dez,19:23,Cubo Flip-Flop p/ bike fixa,300.0,Campinas, Barão Geraldo - DDD 19,https://sp.olx.com.br/grande-campinas/ciclismo/cubo-flip-flop-p-bike-fixa-964943028
-31,3 dez,14:31,Bike fixa caloi atn,1500.0,São Paulo, Parque São Rafael - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-atn-956584703
-32,3 dez,12:24,Bike fixa - vicinitech,2350.0,Ferraz de Vasconcelos, Parque Dourado - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-vicinitech-964769824
-33,3 dez,05:55,Cinelli Histogram Mash 2015 T.57 Bike Fixa Pista Track Raridade!,8500.0,Guarulhos, Parque Continental II - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/cinelli-histogram-mash-2015-t-57-bike-fixa-pista-track-raridade-964633762
-34,30 nov,19:25,Bike de Pista / Fixa RIDLEY Oval ,3900.0,São Paulo, Vila Sônia - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-de-pista-fixa-ridley-oval-963468055
-35,29 nov,12:40,Par de cubos para bicicleta fixa + 2 pinhão,80.0,Ribeirão Preto, Jardim São Luiz - DDD 16,https://sp.olx.com.br/regiao-de-ribeirao-preto/ciclismo/par-de-cubos-para-bicicleta-fixa-2-pinhao-962737042
-36,29 nov,10:08,Caloi 10 Single 1978,850.0,Santos, Aparecida - DDD 13,https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/caloi-10-single-1978-962657907
-37,29 nov,07:26,Bike fixa (Velocidade),3200.0,Jacareí, Parque Santo Antônio - DDD 12,https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/bike-fixa-velocidade-962609270
-38,27 nov,10:48,quadro caloi 10 modificado para projeto de bike fixa tamanho 58,349.0,Nova Odessa, Jardim Santa Rita I - DDD 19,https://sp.olx.com.br/grande-campinas/ciclismo/quadro-caloi-10-modificado-para-projeto-de-bike-fixa-tamanho-58-962152811
-39,25 nov,20:24,"Bicicleta bike fixa aro 26 , para aproveitar peças",100.0,Campinas, Vila Marieta - DDD 19,https://sp.olx.com.br/grande-campinas/ciclismo/bicicleta-bike-fixa-aro-26-para-aproveitar-pecas-961571759
-40,23 nov,23:30,"Par De Rodas (650) ,26x 1.3/8- Fixa, caloi,monark,- Bike",399.0,São Paulo, Quinta da Paineira - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/par-de-rodas-650-26x-1-3-8-fixa-caloi-monark-bike-960675702
-41,23 nov,14:59,Bike fixa/single speed ,1800.0,São Paulo, Perdizes - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-single-speed-960444844
-42,22 nov,19:09,Bike Speed Fixa ,2000.0,São Paulo, Parque Bristol - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-speed-fixa-960081792
-43,21 nov,16:00,bike bicicleta fixa pra sair logo ,750.0,São Paulo, Aclimação - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-bicicleta-fixa-pra-sair-logo-959602951
-44,18 nov,21:01,Kit Parafusos Em Titânio Para Manetes de Freio Bike (Rainbow),105.0,Matão, Park do Imperador - DDD 16,https://sp.olx.com.br/regiao-de-ribeirao-preto/ciclismo/kit-parafusos-em-titanio-para-manetes-de-freio-bike-rainbow-938880283
-45,16 nov,17:06,Bike scott fixa ,2500.0,São Paulo, Parque Imperial - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-scott-fixa-957547617
-46,16 nov,12:01,bike bicicleta fixa ,1100.0,São Paulo, Aclimação - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-bicicleta-fixa-957378535
-47,14 nov,23:32,Bicicleta Fixa Miyamura 52/53,2300.0,São Paulo, Cerqueira César - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-miyamura-52-53-956889618
-48,14 nov,17:01,Refletores Brancos De Raios C/ Fixador P/ Bike Kit 50 Peças,50.0,São Paulo, Vila Moraes - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/refletores-brancos-de-raios-c-fixador-p-bike-kit-50-pecas-936995149
-49,14 nov,17:01,Peças para bicicleta Fixa speed,15.0,São Paulo, Vila União (Zona Leste) - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/pecas-para-bicicleta-fixa-speed-956815405
-50,13 nov,13:06,Vendo bike Caloi 10 fixa ,800.0,Vera Cruz, Centro - DDD 14,https://sp.olx.com.br/regiao-de-bauru-e-marilia/ciclismo/vendo-bike-caloi-10-fixa-956517689
-51,13 nov,11:13,BIKE FIXA -Vendo/Troco MTB 29,1800.0,São Vicente, Esplanada dos Barreiros - DDD 13,https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/bike-fixa-vendo-troco-mtb-29-953488574
-52,12 nov,13:19,Bicicleta Fixa/fixed gear babilônia tam. 50,2000.0,São Paulo, Aclimação - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-fixed-gear-babilonia-tam-50-956074316
-53,8 nov,21:17,Bike fixa Statecycle ,2650.0,São Paulo, Ipiranga - DDD 11,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-statecycle-954352170
-54,30 nov,10:40,BikeFixa Raf ,2600.0,Curitiba, Centro Cívico - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bikefixa-raf-963211951
-55,Ontem,14:51,Bicicleta Ceci 80 Vintage (restaurada) + Kit Nexus Shimano 3 marchas,1200.0,Maringá, Parque Residencial Quebec - DDD 44,https://pr.olx.com.br/regiao-de-maringa/ciclismo/bicicleta-ceci-80-vintage-restaurada-kit-nexus-shimano-3-marchas-965749769
-56,22 nov,18:08,Cubo nexus  shimano  3 marchas interna.,450.0,Curitiba, Bigorrilho - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/cubo-nexus-shimano-3-marchas-interna-960054543
-57,3 nov,10:44,Bicicleta Triumph (ZEG) tipo Holandesa com Shimano Nexus3,1650.0,Curitiba, Juvevê - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bicicleta-triumph-zeg-tipo-holandesa-com-shimano-nexus3-927790832
-58,5 dez,13:01,Aros Rigida 700c 32 Furos Speed Fixa Fixed / Cubo Dianteiro Shimano 600,334.0,Curitiba, Santa Cândida - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/aros-rigida-700c-32-furos-speed-fixa-fixed-cubo-dianteiro-shimano-600-963767445
-59,15 nov,20:31,Fixa ,200.0,Curitiba, Barreirinha - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/fixa-949030949
-60,15 nov,16:01,"Samsung gear s3 frontier, aceito trocas ",1000.0,Fazenda Rio Grande, Eucaliptos - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/samsung-gear-s3-frontier-aceito-trocas-935269465
-61,Ontem,18:06,COROA 34T WIDE NARROW SINGLE MOTSUV MTB,85.0,Londrina, Sol - DDD 43,https://pr.olx.com.br/regiao-de-londrina/ciclismo/coroa-34t-wide-narrow-single-motsuv-mtb-965837899
-62,Ontem,18:04,COROA 32T WIDE NARROW SINGLE MOTSUV,85.0,Londrina, Sol - DDD 43,https://pr.olx.com.br/regiao-de-londrina/ciclismo/coroa-32t-wide-narrow-single-motsuv-965836979
-63,24 nov,20:50,Fixa ( caixinha ),750.0,Curitiba, Novo Mundo - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/fixa-caixinha-961108053
-64,14 nov,20:03,"Cubo Yamada Novo Roda Fixa / Single Speed, com pinhão fixo e catraca livre",135.0,Curitiba, Centro - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/cubo-yamada-novo-roda-fixa-single-speed-com-pinhao-fixo-e-catraca-livre-956857798
-65,7 nov,10:05,Caloi 10 single muito nova,1500.0,Maringá, Jardim Paris - DDD 44,https://pr.olx.com.br/regiao-de-maringa/ciclismo/caloi-10-single-muito-nova-953737059
-66,Ontem,18:01,Bicicleta giant allegre fixa,1700.0,Curitiba, Campo Comprido - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bicicleta-giant-allegre-fixa-965136100
-67,5 dez,17:31,Bike fixa quadro auto ,790.0,Curitiba, Capão Raso - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-fixa-quadro-auto-962975974
-68,5 dez,10:09,Suportes para Bike e Garrafas Térmicas - Vários Modelos e Cores - À Pronta Entrega !!!,15.0,Curitiba, Boqueirão - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/suportes-para-bike-e-garrafas-termicas-varios-modelos-e-cores--pronta-entrega-894916084
-69,4 dez,18:43,Bike fixa vicinitech pista NOVA,2950.0,Curitiba, Portão - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-fixa-vicinitech-pista-nova-965242093
-70,3 dez,23:09,Mala bike Shimano Pro - Top demais - fixa gancheira e DESMONTÁVEL ,3300.0,Curitiba, Mossunguê - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/mala-bike-shimano-pro-top-demais-fixa-gancheira-e-desmontavel-965007314
-71,1 dez,13:31,Bike fixa pista Vicinitech Pista V1 TAM 53,2900.0,Curitiba, Juvevê - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-fixa-pista-vicinitech-pista-v1-tam-53-955705441
-72,30 nov,13:22,Vendo ou troco bike fixa. Pneu maciço. ,1600.0,São José dos Pinhais, Parque da Fonte - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/vendo-ou-troco-bike-fixa-pneu-macico-963298580
-73,30 nov,11:45,Bike fixa ,1800.0,Curitiba, Guabirotuba - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-fixa-963245112
-74,25 nov,14:41,Bike Fixa,2500.0,São José dos Pinhais, Braga - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-fixa-961420773
-75,24 nov,23:42,Bicicleta bike FIXA SINGLE (flip-flop),1500.0,Maringá, Zona 07 - DDD 44,https://pr.olx.com.br/regiao-de-maringa/ciclismo/bicicleta-bike-fixa-single-flip-flop-961158605
-76,24 nov,18:15,Cinta para Fixação de Bike em Rack Transbike Centro Curitiba,18.0,Curitiba, Centro - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/cinta-para-fixacao-de-bike-em-rack-transbike-centro-curitiba-961054005
-77,24 nov,11:01,Bike Fixa - Akira Cubo Shimano,4600.0,Curitiba, Cristo Rei - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-fixa-akira-cubo-shimano-960824571
-78,23 nov,22:38,Peugeot 10 Single Speed,1899.0,Quatro Barras - DDD 41, ,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/peugeot-10-single-speed-960668496
-79,23 nov,14:19,Bicicleta Praiera Quadro Caloi 10 Single linda pode Fazer Fixa,990.0,Curitiba, Água Verde - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bicicleta-praiera-quadro-caloi-10-single-linda-pode-fazer-fixa-960420009
-80,19 nov,20:37,Bike single/ fixa vendo ou troco,2400.0,Paranaguá, Eldorado - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-single-fixa-vendo-ou-troco-959069453
-81,19 nov,20:25,Vendo ou troco Bike fixa Airwalk pista V tamanho 53 Chromoly,1900.0,Paranaguá, Eldorado - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/vendo-ou-troco-bike-fixa-airwalk-pista-v-tamanho-53-chromoly-959066736
-82,19 nov,11:05,Bike fixa speed Marca eight aro 700x23,1650.0,Curitiba, Pilarzinho - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-fixa-speed-marca-eight-aro-700x23-943980317
-83,18 nov,19:31,Bike Fixa Giant. Quadro 58,1100.0,Curitiba, Cidade Industrial - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-fixa-giant-quadro-58-950987475
-84,15 nov,11:23,Bike Singlespeed Monark 10 tamanho 58 ,800.0,Curitiba, Vila Izabel - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-singlespeed-monark-10-tamanho-58-956992484
-85,14 nov,16:29,Bicicleta fixa ,999.0,Curitiba, Boqueirão - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bicicleta-fixa-956809085
-86,10 nov,08:01,Aro 700 para bike fixa duas catracas.,250.0,Curitiba, Cidade Industrial - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/aro-700-para-bike-fixa-duas-catracas-955018623
-87,9 nov,22:36,Bike fixa,900.0,Curitiba, Pinheirinho - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/bike-fixa-954921278
-88,9 nov,22:31,Transbike fixa fácil engate para três bikes AL-50 Altmayer  (novo),369.0,Curitiba, Santa Quitéria - DDD 41,https://pr.olx.com.br/regiao-de-curitiba-e-paranagua/ciclismo/transbike-fixa-facil-engate-para-tres-bikes-al-50-altmayer-novo-935107432
-89,3 dez,19:24,FIXA 8BIKE DOURADA ,1850.0,Balneário Camboriú, Barra - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/fixa-8bike-dourada-964943458
-90,Ontem,16:14,Bicicleta Elleven Gear Laranja/cinza Aro 29,2300.0,Florianópolis, Capoeiras - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/bicicleta-elleven-gear-laranja-cinza-aro-29-965792418
-91,1 dez,22:55,Elleven gear aro 29 nova ,2399.0,São José, Areias - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/elleven-gear-aro-29-nova-964090556
-92,22 nov,18:42,Bicicletas Aro 29 21v Shimano Elleven Gear/South Legen Black Week,1367.0,Itajaí, Cidade Nova - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bicicletas-aro-29-21v-shimano-elleven-gear-south-legen-black-week-960070557
-93,19 nov,10:45,BICICLETA FIXA ,1000.0,Balneário Camboriú, Centro - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bicicleta-fixa-958798715
-94,18 nov,17:25,Bike/Bicicleta aro 29 Elleven modelo Gear - nova,2080.0,Florianópolis, Carianos - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/bike-bicicleta-aro-29-elleven-modelo-gear-nova-958497054
-95,18 nov,17:23,Bike/Bicicleta aro 29 Modelo Gear 2021,2080.0,Florianópolis, Carianos - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/bike-bicicleta-aro-29-modelo-gear-2021-958496091
-96,29 nov,11:21,Avanço Cinelli ,380.0,Ilhota - DDD 47, ,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/avanco-cinelli-962696749
-97,5 dez,01:47,Pedal Powertap P1S Single - Power Meter,2700.0,Florianópolis, Centro - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/pedal-powertap-p1s-single-power-meter-965291148
-98,23 nov,12:07,Caloi 10 (single),900.0,São José, Potecas - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/caloi-10-single-960348912
-99,9 nov,14:00,Bicicleta Single/Fixa Cypress da Riva Cycles,3600.0,Florianópolis, Rio Tavares - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/bicicleta-single-fixa-cypress-da-riva-cycles-954619673
-100,Ontem,21:01,Bike fixa linda !!,1600.0,Balneário Camboriú, Estados - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bike-fixa-linda-963081156
-101,Ontem,17:26,Bike Fixa Tetrapode ,1400.0,Itajaí, Fazenda - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bike-fixa-tetrapode-950085556
-102,Ontem,16:18,Bike fixa ,1800.0,Balneário Camboriú, Centro - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bike-fixa-965794978
-103,5 dez,01:59,Bike Fixa/Single speed,2200.0,Joinville, Anita Garibaldi - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bike-fixa-single-speed-965292567
-104,4 dez,09:55,Coroa alumínio bike fixa  BCD 48T 144 ,168.0,Florianópolis, São João do Rio Vermelho - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/coroa-aluminio-bike-fixa-bcd-48t-144-965079461
-105,1 dez,15:08,Speed - Fixa ,500.0,Joinville, Saguaçu - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/speed-fixa-963884249
-106,30 nov,18:18,Bicicleta Fixa Tetrápode ,1300.0,Balneário Camboriú, Centro - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bicicleta-fixa-tetrapode-963445049
-107,30 nov,12:36,Bike fixa ,1000.0,Florianópolis, Trindade - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/bike-fixa-963271764
-108,28 nov,17:01,Desapego Bicicleta Fixa ,1350.0,Florianópolis, Lagoa da Conceição - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/desapego-bicicleta-fixa-942679510
-109,26 nov,21:03,vendo bike fixa,550.0,Balneário Camboriú, Municípios - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/vendo-bike-fixa-962011016
-110,24 nov,16:41,Bike Fixa Night Riders,1300.0,Blumenau, Garcia - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bike-fixa-night-riders-961009375
-111,24 nov,08:29,Fuji track pro 2006 bike fixa Tam 56,3000.0,Florianópolis, Pântano do Sul - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/fuji-track-pro-2006-bike-fixa-tam-56-960757307
-112,23 nov,22:31,Quadro de bike Fixa,550.0,Itajaí, São Vicente - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/quadro-de-bike-fixa-952281564
-113,23 nov,20:31,Bike single/fixa,1200.0,Jaraguá do Sul, Três Rios do Sul - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bike-single-fixa-952108754
-114,23 nov,10:58,Pneus Kenda 700X25 - speed/fixa/road,30.0,Florianópolis, Coqueiros - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/pneus-kenda-700x25-speed-fixa-road-960309089
-115,22 nov,07:48,Bike fixa ,1300.0,Florianópolis, Carvoeira - DDD 48,https://sc.olx.com.br/florianopolis-e-regiao/ciclismo/bike-fixa-959742215
-116,17 nov,10:40,Bike Fixa Airwalk,1200.0,Balneário Camboriú, Praia do Estaleiro - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/bike-fixa-airwalk-957820316
-117,16 nov,13:25,Mini e-bike Fixa Mormaii,6500.0,Itajaí, Fazendinha - DDD 47,https://sc.olx.com.br/norte-de-santa-catarina/ciclismo/mini-e-bike-fixa-mormaii-957419322
-118,5 dez,19:31,Raf bike tam 56,1200.0,Porto Alegre, Santa Cecília - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/raf-bike-tam-56-962136442
-119,3 dez,16:59,Bike Elleven Gear Aro 29 Quadro 17 Nova Zero,1999.0,Porto Alegre, Petrópolis - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/bike-elleven-gear-aro-29-quadro-17-nova-zero-964887937
-120,30 nov,11:56,Bike Elleven GEAR HD,1800.0,Porto Alegre, Sarandi - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/bike-elleven-gear-hd-963248453
-121,29 nov,17:31,Bike 29 Gear Elleven NOVA,1750.0,São Leopoldo, Morro do Espelho - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/bike-29-gear-elleven-nova-954765457
-122,20 nov,10:31,Bike Aro 29 Elleven Gear Quadro 17 Zero,1899.0,Porto Alegre, Petrópolis - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/bike-aro-29-elleven-gear-quadro-17-zero-959208957
-123,5 nov,18:52,Bike Elleven Gear Quadro 17 Aro 29 Zero,1999.0,Porto Alegre, Petrópolis - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/bike-elleven-gear-quadro-17-aro-29-zero-953241442
-124,5 nov,18:49,Bike Elleven Gear Quadro 17 Aro 20 Nova,1899.0,Porto Alegre, Petrópolis - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/bike-elleven-gear-quadro-17-aro-20-nova-953235073
-125,30 nov,22:06,guidao drop cinelli 440mm,180.0,Viamao, São Tomé - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/guidao-drop-cinelli-440mm-963521049
-126,5 dez,21:31,Pedivela COROA Single,150.0,São Leopoldo, Centro - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/pedivela-coroa-single-961443173
-127,4 dez,11:26,Peugeot single speed,750.0,Gravataí, Parque dos Anjos - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/peugeot-single-speed-965116470
-128,30 nov,21:10,aro 700 single fixa cubo flip flop,270.0,Viamao, São Tomé - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/aro-700-single-fixa-cubo-flip-flop-963502469
-129,18 nov,20:05,Speed single aro 27,650.0,Porto Alegre, São João - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/speed-single-aro-27-958566687
-130,17 nov,00:45,VENDO SPEED SINGLE ,1000.0,Porto Alegre, Petrópolis - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/vendo-speed-single-957691319
-131,5 dez,22:31,Bike Fixa Single Speed - Black Flea Original,1690.0,São Leopoldo, Centro - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/bike-fixa-single-speed-black-flea-original-963722626
-132,2 dez,08:51,Bike single fixa,1300.0,Viamao, São Lucas - DDD 51,https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/ciclismo/bike-single-fixa-964180704
+,diapostagem,hora,codigo,nomeBike,precoBike,cidade,bairro,cep,urlBike
+0,13 dez,15:03,968605020.0,Bike fixa Night Riders - nova ,2000.0,São Paulo, Vila Antônio - DDD 11,5376140.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-night-riders-nova-968605020
+1,13 dez,14:01,965457398.0,Manopla Punho Bike Espuma Gel Silicone MTB Fixa ,25.0,São Paulo, Bela Vista - DDD 11,1315001.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/manopla-punho-bike-espuma-gel-silicone-mtb-fixa-965457398
+2,13 dez,05:00,968389779.0,Firma Pé  Ronin Inc. Bike fixa Fixed Gear Strap for Fixed,80.0,São Paulo, Cerqueira César - DDD 11,1411000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/firma-pe-ronin-inc-bike-fixa-fixed-gear-strap-for-fixed-968389779
+3,12 dez,14:31,959841605.0,Pinhão 17 dentes (com rosca) para bike Fixa.,40.0,São Paulo, Butantã - DDD 11,5508030.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/pinhao-17-dentes-com-rosca-para-bike-fixa-959841605
+4,11 dez,14:18,967995966.0,Bike fixa TAM 53,1299.0,São Paulo, Jardim Paulista - DDD 11,1405002.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-tam-53-967995966
+5,11 dez,13:36,967981974.0,Bike single speed RAF tamanho 58,1600.0,Campinas, Vila Aeroporto III - DDD 19,13056316.0,https://sp.olx.com.br/grande-campinas/ciclismo/bike-single-speed-raf-tamanho-58-967981974
+6,10 dez,09:50,967491123.0,Caloi 10 fixa,600.0,Nova Granada - DDD 17, ,15440000.0,https://sp.olx.com.br/regiao-de-sao-jose-do-rio-preto/ciclismo/caloi-10-fixa-967491123
+7,9 dez,15:56,967002057.0,Bike fixa State Co Montecore 3.0 Prata (customizada) ,3300.0,São Paulo, Cerqueira César - DDD 11,1418200.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-state-co-montecore-3-0-prata-customizada-967002057
+8,7 dez,11:59,966088742.0,Bike fixa vicinitech pista 55,2500.0,Taubaté, Alto São Pedro - DDD 12,12082720.0,https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/bike-fixa-vicinitech-pista-55-966088742
+9,6 dez,17:52,965831193.0,Bike fixa,1400.0,São Paulo, Belenzinho - DDD 11,3058010.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-965831193
+10,6 dez,16:24,965798408.0,Bikw fixa Kombat,1499.0,Caieiras, Serpa - DDD 11,7716210.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bikw-fixa-kombat-965798408
+11,4 dez,09:13,965069530.0,Bike fixa kombat Tamanho 52,2400.0,São Paulo, Brasilândia - DDD 11,2845050.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-kombat-tamanho-52-965069530
+12,3 dez,19:23,964943028.0,Cubo Flip-Flop p/ bike fixa,300.0,Campinas, Barão Geraldo - DDD 19,13084070.0,https://sp.olx.com.br/grande-campinas/ciclismo/cubo-flip-flop-p-bike-fixa-964943028
+13,3 dez,14:31,956584703.0,Bike fixa caloi atn,1500.0,São Paulo, Parque São Rafael - DDD 11,8311080.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-atn-956584703
+14,3 dez,12:24,964769824.0,Bike fixa - vicinitech TOP,2000.0,Ferraz de Vasconcelos, Parque Dourado - DDD 11,8527090.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-vicinitech-top-964769824
+15,30 nov,19:25,963468055.0,Bike de Pista / Fixa RIDLEY Oval ,3900.0,São Paulo, Vila Sônia - DDD 11,5625000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-de-pista-fixa-ridley-oval-963468055
+16,29 nov,07:26,962609270.0,Bike fixa (Velocidade),3200.0,Jacareí, Parque Santo Antônio - DDD 12,12309660.0,https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/bike-fixa-velocidade-962609270
+17,27 nov,10:48,962152811.0,quadro caloi 10 modificado para projeto de bike fixa tamanho 58,329.0,Nova Odessa, Jardim Santa Rita I - DDD 19,13386068.0,https://sp.olx.com.br/grande-campinas/ciclismo/quadro-caloi-10-modificado-para-projeto-de-bike-fixa-tamanho-58-962152811
+18,23 nov,23:30,960675702.0,"Par De Rodas (650) ,26x 1.3/8- Fixa, caloi,monark,- Bike",399.0,São Paulo, Quinta da Paineira - DDD 11,3152155.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/par-de-rodas-650-26x-1-3-8-fixa-caloi-monark-bike-960675702
+19,23 nov,14:59,960444844.0,Bike fixa/single speed ,1700.0,São Paulo, Perdizes - DDD 11,5008020.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-single-speed-960444844
+20,22 nov,19:09,960081792.0,Bike Speed Fixa ,2000.0,São Paulo, Parque Bristol - DDD 11,4193030.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-speed-fixa-960081792
+21,21 nov,16:00,959602951.0,bike bicicleta fixa pra sair logo ,750.0,São Paulo, Aclimação - DDD 11,1531000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-bicicleta-fixa-pra-sair-logo-959602951
+22,16 nov,12:01,957378535.0,bike bicicleta fixa ,1100.0,São Paulo, Aclimação - DDD 11,1526020.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-bicicleta-fixa-957378535
+23,Hoje,19:01,969654306.0,Peugeot Turismo 3 Fixa,1000.0,Santos, Embaré - DDD 13,11040240.0,https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/peugeot-turismo-3-fixa-969654306
+24,Hoje,17:14,969596083.0,Peças para bicicleta Fixa speed,15.0,São Paulo, Vila União (Zona Leste) - DDD 11,3683000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/pecas-para-bicicleta-fixa-speed-969596083
+25,Hoje,15:31,962110804.0,Bicicleta fixa / single speed,1200.0,Diadema, Taboão - DDD 11,9940170.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-single-speed-962110804
+26,Hoje,11:26,969415708.0,Bicicleta fixa aro 700,1500.0,São Vicente, Vila Cascatinha - DDD 13,11370020.0,https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/bicicleta-fixa-aro-700-969415708
+27,Hoje,10:30,969369355.0,Bicicleta Riva Basement - Bordô Tam. 55 - Fixa/ Single,4499.0,São Paulo, Vila Mariana - DDD 11,4105000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-riva-basement-bordo-tam-55-fixa-single-969369355
+28,Ontem,18:31,966577853.0,Bicicleta Bike Fixa Fuji Feather linda,3900.0,São Paulo, Boaçava - DDD 11,5469000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-bike-fixa-fuji-feather-linda-966577853
+29,Ontem,15:31,966541514.0,Selim brooks 3 molas usado bom estado bicicleta fixa e cicloturismo,500.0,São Paulo, Jardim Lourdes - DDD 11,8452430.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/selim-brooks-3-molas-usado-bom-estado-bicicleta-fixa-e-cicloturismo-966541514
+30,12 dez,12:33,968228220.0,Caloi / monark 10 fixa single ,700.0,Praia Grande, Vila Sônia - DDD 13,11722100.0,https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/caloi-monark-10-fixa-single-968228220
+31,8 dez,22:01,958579837.0,Bicicleta Fixa Caixa Night Riders (não aceito troca),1000.0,São Paulo, Vila Guarani (Z Sul) - DDD 11,4311060.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-caixa-night-riders-nao-aceito-troca-958579837
+32,8 dez,13:26,966532519.0,Bicicleta Bike Fixa Single Speed Aro 700 Gancheira Pista,1250.0,São Paulo, Vila Indiana - DDD 11,5586060.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-bike-fixa-single-speed-aro-700-gancheira-pista-966532519
+33,3 dez,05:55,964633762.0,Cinelli Histogram Mash 2015 T.57 Bike Fixa Pista Track Raridade!,8500.0,Guarulhos, Parque Continental II - DDD 11,7084270.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/cinelli-histogram-mash-2015-t-57-bike-fixa-pista-track-raridade-964633762
+34,2 dez,22:06,927588908.0,Bicicleta aro 29 24v Disco toda Shimano Troco Notebook Mic Condenser Guita ponte Fixa,1299.0,São Paulo, Vila Piauí - DDD 11,5109170.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-aro-29-24v-disco-toda-shimano-troco-notebook-mic-condenser-guita-ponte-fixa-927588908
+35,30 nov,14:13,963320370.0,Mesinha bicicleta caloi 10 antiga fixa speed dia compe,60.0,Ribeirão Preto, Jardim São Luiz - DDD 16,14020380.0,https://sp.olx.com.br/regiao-de-ribeirao-preto/ciclismo/mesinha-bicicleta-caloi-10-antiga-fixa-speed-dia-compe-963320370
+36,29 nov,10:08,962657907.0,Caloi 10 Single 1978,850.0,Santos, Aparecida - DDD 13,11025250.0,https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/caloi-10-single-1978-962657907
+37,28 nov,17:03,962493507.0,Bicicleta fixa pra sair logo ,750.0,São Paulo, Jardim Pedro José Nunes - DDD 11,8061130.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-pra-sair-logo-962493507
+38,26 nov,09:44,961722601.0,Bicicleta Fixa Airwalk chromoly ,1000.0,Marília, Jardim Maria Izabel - DDD 14,17516230.0,https://sp.olx.com.br/regiao-de-bauru-e-marilia/ciclismo/bicicleta-fixa-airwalk-chromoly-961722601
+39,25 nov,20:24,961571759.0,"Bicicleta bike fixa aro 26 , para aproveitar peças",100.0,Campinas, Vila Marieta - DDD 19,13042903.0,https://sp.olx.com.br/grande-campinas/ciclismo/bicicleta-bike-fixa-aro-26-para-aproveitar-pecas-961571759

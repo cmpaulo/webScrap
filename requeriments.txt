@@ -1,4 +1,6 @@
  beautifulsoup4
+ lxml
  numpy
  pandas
  requests
+ virtualenv

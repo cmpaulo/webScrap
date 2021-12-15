@@ -115,7 +115,7 @@ datai = pd.DataFrame()
 # for i in ["SP","PR","SC","RS"]:
 # buscar bicicleta que foram roubadas pelo nome do anuncio, selecionar as bicicletas que estão com o valor abaixo da média onde poderia estar anunciada a bicicleta que foi roubada.
 for i in ["SP"]:
-    for j in ['sunburst','hotdog','bike%20fixa','bicicleta%20fixa']:
+    for j in ['bike%20fixa','bicicleta%20fixa']:
         print(j)
         reg = "0"
         datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))

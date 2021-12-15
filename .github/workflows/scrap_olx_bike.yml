@@ -37,5 +37,5 @@ jobs:
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.WEB_SCRAP }}
+          github_token: ${{ secrets.REPO_TOKEN }}
           branch: main  

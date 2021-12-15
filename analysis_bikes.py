@@ -30,7 +30,7 @@ for i in data.index:
 data.reset_index(inplace=True,drop=True)
 
 # clean data
-# data.to_csv('dados_bike_BR_clean.csv')
+data.to_csv('dados_bike_BR_clean.csv')
 
 metrica = plt.boxplot(data['precoBike'])
 captop = metrica['caps'][1].get_ydata()[0]
@@ -57,7 +57,7 @@ ax.set_ylim(means.index[0],means.index[-1])
 ax.set_yticklabels(means.index)
 plt.legend()
 plt.tight_layout()
-# plt.savefig("./images/median_price_of_bike.png")
+plt.savefig("./images/median_price_of_bike.png")
 
 # plt.show()
 # print dos valores
@@ -78,8 +78,8 @@ ax.set_ylim(counts_anuncios.index[0],counts_anuncios.index[-1])
 ax.set_xticklabels(np.arange(0,counts_anuncios.values.max()+6,2))
 ax.set_yticklabels(counts_anuncios.index)
 plt.tight_layout()
-# plt.savefig("./images/number_of_ads_bycity.png")
-plt.show()
+plt.savefig("./images/number_of_ads_bycity.png")
+# plt.show()
 
 
 

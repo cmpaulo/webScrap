@@ -35,6 +35,9 @@ Data scraping was carried out and the database was created to analyze the averag
 Database formed by information in OLX Brasil website advertisements.
 
 The code is with variables and comments in Portuguese, and the search for advertisements is carried out with words in the Portuguese language.
+
+The images are updated every 12 hours, and show the result of the search for keywords in each Brazilian state, only on the OLX advertising website (Brazil).
+
 ## Conclusions
 
 The data obtained allows answers to questions with a graphic presentation of the average value of bicycles per city.

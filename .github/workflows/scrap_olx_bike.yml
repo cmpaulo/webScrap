@@ -1,6 +1,8 @@
 name: scraper-ads
 
-on: push
+on:
+  schedule:
+    - cron: '0 */12 * * *' # runs at each 12:00 everyday
 
 jobs:
   build:

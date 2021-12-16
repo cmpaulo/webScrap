@@ -1,4 +1,5 @@
 # webScrap
+[![scraper-ads](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml/badge.svg)](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml)
 
 <!-- ingles -->
 
@@ -49,4 +50,4 @@ The data obtained allows answers to questions with a graphic presentation of the
 ![graph1](/images/number_of_ads_bycity.png)
 
 ## References
-![Freecodecamp.org - Web scraping python tutorial](https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website)
+[!Freecodecamp.org - Web scraping python tutorial](https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website)

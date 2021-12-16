@@ -41,16 +41,17 @@ dataK = data[(data['precoBike'] > 400) & (data['precoBike'] < captop)]
 plt.figure(figsize=(10, 7))
 ax = plt.axes()
 means = dataK.groupby('cidade').mean().sort_values('precoBike',ascending=False)['precoBike']
-ax.barh(means.index, means.values)
-ax.axvline(means.mean(), color = 'red',ls = 'dashed', label='Preço médio na Região Sul')
-ax.set_title('Valor médio para as bicicletas fixa nas cidades da Região Sul')
+ax.barh(means.index, means.values,label='Preço médio')
+ax.axvline(means.mean(), color = 'red',ls = 'dashed', label='Preço médio no Estado de São Paulo')
+# ax.set_title('Valor médio para as bicicletas fixa nas cidades da Região Sul')
+ax.set_title('Valor médio para as bicicletas fixa nas cidades do Estado de São Paulo')
 
 # dataK.groupby('cidade').median().sort_values('precoBike',ascending=False).plot(); plt.tight_layout()
 # quantidade de anuncios
 # dataK.groupby('cidade').count().sort_values('precoBike',ascending=False).plot.bar(y='precoBike', ylim=[0,20],label='Número de anuncios por cidade de bike fixa na Região Sul'); plt.tight_layout(); plt.show()
 
 ax.set_ylabel('Cidade')
-ax.set_xlabel('Média de preço [R$]')
+ax.set_xlabel('Preço médio [R$]')
 ax.set_xlim(0,int(means.values.max())+500)
 ax.set_xticklabels(np.arange(0,int(means.values.max())+1000,500))
 ax.set_ylim(means.index[0],means.index[-1])
@@ -68,8 +69,8 @@ plt.savefig("./images/median_price_of_bike.png")
 plt.figure(figsize=(10, 7))
 ax = plt.axes()
 counts_anuncios = dataK.groupby('cidade').count().sort_values('precoBike',ascending=True)['precoBike']
-ax.barh(counts_anuncios.index, counts_anuncios.values, label='Número de anúncios por cidade de bike fixa na Região Sul')
-ax.set_title('Número de anúncios de bicicletas fixa nas cidades da Região Sul')
+ax.barh(counts_anuncios.index, counts_anuncios.values, label='Número de anúncios por cidade de bike fixa no Estado de São Paulo')
+ax.set_title('Número de anúncios de bicicletas fixa nas cidades do Estado de São Paulo')
 
 ax.set_ylabel('Cidade')
 ax.set_xlabel('Número de anúncios')
@@ -83,6 +84,6 @@ plt.savefig("./images/number_of_ads_bycity.png")
 
 mm = means[means.values < means.mean()]
 for jj in mm.index[::-1]:
+    print('__________________________ Anúncio __________________________')
     print('cidade: ', jj)
     print(dataK.loc[dataK.cidade == jj,['diapostagem','urlBike']].values)
-    print(' ______________________________________________')

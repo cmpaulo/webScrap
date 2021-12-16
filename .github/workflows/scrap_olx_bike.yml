@@ -22,14 +22,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requeriments.txt
           
-      - name: execute py script # run data
+      - name: execute py script to scrap # scrap data
         env: 
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run: python scrap_olx_bike.py
       
-      - name: execute py script
+      - name: execute py script for analysis # analyse datas
         run: python analysis_bikes.py
           
       - name: commit files

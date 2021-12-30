@@ -30,7 +30,7 @@ for i in data.index:
 data.reset_index(inplace=True,drop=True)
 
 # clean data
-data.to_csv('dados_bike_BR_clean.csv')
+data.to_csv('dados_bike_sunburst_clean.csv')
 
 metrica = plt.boxplot(data['precoBike'])
 captop = metrica['caps'][1].get_ydata()[0]
@@ -82,8 +82,7 @@ plt.tight_layout()
 plt.savefig("./images/number_of_ads_bycity.png")
 # plt.show()
 
-mm = means[means.values < means.mean()]
-for jj in mm.index[::-1]:
-    print('__________________________ Anúncio __________________________')
-    print('cidade: ', jj)
-    print(dataK.loc[dataK.cidade == jj,['diapostagem','urlBike']].values)
+Lower_mean_ads = dataK.sort_values('precoBike',ascending=False)
+ads = Lower_mean_ads[Lower_mean_ads['precoBike'].values < means.mean()]
+ads_mkdw = ads.loc[:,['diapostagem','cidade','precoBike','urlBike']]
+ads_mkdw.to_markdown('anuncios_menores_media.md')

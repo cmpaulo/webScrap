@@ -43,6 +43,7 @@ The images are updated every 12 hours, and show the result of the search for key
 
 The data obtained allows answers to questions with a graphic presentation of the average value of bicycles per city.
 
+The result of ads with a value lower than the average value of ads in the state of são paulo is in the table in markdown [TMD](/anuncios_menores_media.md)
 
 ![graphnumber](/images/median_price_of_bike.png)
 

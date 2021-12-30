@@ -85,4 +85,4 @@ plt.savefig("./images/number_of_ads_bycity.png")
 Lower_mean_ads = dataK.sort_values('precoBike',ascending=False)
 ads = Lower_mean_ads[Lower_mean_ads['precoBike'].values < means.mean()]
 ads_mkdw = ads.loc[:,['diapostagem','cidade','precoBike','urlBike']]
-ads_mkdw.to_markdown('anuncios_menores_media.md')
+ads_mkdw.to_markdown('anuncios_menores_media.md',index=False)

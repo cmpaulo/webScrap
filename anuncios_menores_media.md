@@ -1,11 +1,9 @@
 | diapostagem   | cidade                |   precoBike | urlBike                                                                                                                         |
 |:--------------|:----------------------|------------:|:--------------------------------------------------------------------------------------------------------------------------------|
-| 17 dez        | Diadema               |        1200 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-single-speed-962110804                                         |
+| 27 dez        | São José dos Campos   |        1000 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/bike-fixa-973227620                                              |
 | 15 dez        | Santos                |        1000 | https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/peugeot-turismo-3-fixa-969654306                                  |
 | 8 dez         | São Paulo             |        1000 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-caixa-night-riders-nao-aceito-troca-958579837                  |
-| 27 dez        | São José dos Campos   |        1000 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/bike-fixa-973227620                                              |
 | 16 dez        | Vera Cruz             |         800 | https://sp.olx.com.br/regiao-de-bauru-e-marilia/ciclismo/caloi-10-fixa-970104109                                                |
-| 28 dez        | Indaiatuba            |         800 | https://sp.olx.com.br/grande-campinas/ciclismo/bike-fixa-973644236                                                              |
 | 10 dez        | Nova Granada - DDD 17 |         600 | https://sp.olx.com.br/regiao-de-sao-jose-do-rio-preto/ciclismo/caloi-10-fixa-967491123                                          |
 | 28 dez        | São Paulo             |         500 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/selim-brooks-3-molas-usado-bom-estado-bicicleta-fixa-e-cicloturismo-966541514 |
 | 25 dez        | Americana - DDD 19    |         500 | https://sp.olx.com.br/grande-campinas/ciclismo/quadro-speed-galo-54-e-pecas-para-bike-fixa-972856730                            |

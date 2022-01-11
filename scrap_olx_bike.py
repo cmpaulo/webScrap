@@ -11,10 +11,12 @@ import requests
 # melhora o try para obter mais resultados.
 # Obtém a URL
 # palavras para buscar [Airwalk, RAF, 8Bike, Nexus, Vicinitech, Tetrapode]
+
 def buscarDadosOLX(estado= "SP", regiao = "11", palavra = "fixa"):
     regiaoBuscar = {"0":"","11":"sao-paulo-e-regiao"}
     listaAnuncios = []
     estado = estado.lower()
+    palavra = palavra.lower()
     if regiao == "0":
         url = f"https://{estado}.olx.com.br/ciclismo?q={palavra}&sf=1"
 
@@ -22,7 +24,7 @@ def buscarDadosOLX(estado= "SP", regiao = "11", palavra = "fixa"):
         url = f"https://{estado}.olx.com.br/{regiaoBuscar[regiao]}/ciclismo?q={palavra}&sf=1"
         
     PARAMS = {
-        "authority" : "pr.olx.com.br",
+        "authority" : "sp.olx.com.br",
         "method": "GET",
         "path": "sao-paulo-e-regiao/ciclismo",
         "scheme" : "https",
@@ -34,8 +36,15 @@ def buscarDadosOLX(estado= "SP", regiao = "11", palavra = "fixa"):
         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36"
     }
     page = requests.get(url=url, headers=PARAMS)
+    
+    if (page.status_code != 200):
+        print('problema no servidor', 'code status ', page.status_code)
+        exit()
+    else:
+        print('OK')
+    
     soup = BeautifulSoup(page.content, 'lxml')
-    # dicanuncios = {'diapostagem':[], 'hora':[],'nomedoVeiculo':[],'precoVeiculo':[],'kmrodado':[],'Cambio':[],'combustivel':[],'cidade':[],'bairro':[],'url':[]}
+
     nResultadosBusca = soup.find_all("span", class_="sc-1mi5vq6-0 eDXljX sc-ifAKCX fhJlIo")[0].contents[0]
 
     if len(nResultadosBusca) > 20:
@@ -99,7 +108,7 @@ def buscarDadosOLX(estado= "SP", regiao = "11", palavra = "fixa"):
                     print("Item não identificado como anuncio.")
                     listaAnuncios.append(np.ones(9)*np.nan )
         
-    name = ['diapostagem', 'hora','codigo','nomeBike','precoBike','cidade','bairro','cep','urlBike']
+    name = ['diaPostagem', 'hora','codigo','nomeBike','precoBike','cidade','bairro','cep','urlBike']
     data = pd.DataFrame(listaAnuncios, columns=name)
         # data.to_csv(f'dados_bike_{estado}_{regiao}.csv')
     return data
@@ -114,13 +123,17 @@ datai = pd.DataFrame()
 
 # for i in ["SP","PR","SC","RS"]:
 # buscar bicicleta que foram roubadas pelo nome do anuncio, selecionar as bicicletas que estão com o valor abaixo da média onde poderia estar anunciada a bicicleta que foi roubada.
+#1/ sunburst, hotdog
+#2/ 8bike, rosa, @NaFlavia
+#Caloi City Tour
+#['sense','sense%20urban','sense%20move'
 for i in ["SP"]:
-    for j in ['sunburst','hotdog','bike%20fixa','bicicleta%20fixa']:
+    for j in ['8bike', 'bike%20fixa','bicicleta%20fixa', 'barra%20fixa', 'caixa','night%20riders']:
         print(j)
         reg = "0"
         datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))
     
-datai.to_csv(f'dados_bike_busca_sunburst.csv')
+datai.to_csv(f'dados_bike_busca.csv')
 print(datai)
 
 print("Fim!")

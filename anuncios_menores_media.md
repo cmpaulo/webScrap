@@ -1,7 +1,0 @@
-| diapostagem   | cidade                |   precoBike | urlBike                                                                                                                         |
-|:--------------|:----------------------|------------:|:--------------------------------------------------------------------------------------------------------------------------------|
-| 5 jan         | São Paulo             |        1000 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-caixa-night-riders-nao-aceito-troca-958579837                  |
-| Hoje          | Suzano                |         700 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/caloi-10-fixa-977957981                                                       |
-| 8 jan         | Nova Granada - DDD 17 |         500 | https://sp.olx.com.br/regiao-de-sao-jose-do-rio-preto/ciclismo/caloi-10-fixa-977286800                                          |
-| 28 dez        | São Paulo             |         500 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/selim-brooks-3-molas-usado-bom-estado-bicicleta-fixa-e-cicloturismo-966541514 |
-| Ontem         | São Paulo             |         499 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/rack-suporte-bike-3-bicicletas-fixacao-engate-b3x-eqmax-974680823             |

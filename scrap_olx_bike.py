@@ -128,7 +128,7 @@ datai = pd.DataFrame()
 #Caloi City Tour
 #['sense','sense%20urban','sense%20move'
 for i in ["SP"]:
-    for j in ['8bike', 'bike%20fixa','bicicleta%20fixa', 'barra%20fixa', 'caixa','night%20riders']:
+    for j in ['8bike', 'sunburst', 'hotdog', 'caixinha', 'caixa', 'bike%20fixa', 'bicicleta%20fixa', 'barra%20fixa', 'night%20riders']:
         print(j)
         reg = "0"
         datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))

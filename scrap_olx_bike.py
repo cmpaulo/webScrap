@@ -115,7 +115,8 @@ def buscarDadosOLX(estado= "SP", regiao = "11", palavra = "fixa"):
 
 
 # Referência de busca: fixie, barra forte,bike urbana, urban bike, single speed, bike speed, colossi, 8bike, fuji, trek, cannondale, specialized, Night Riders, 
-# Specialized Langster, Caloi, Aço Hi-ten, aro 700. 
+# Specialized Langster, Caloi, Aço Hi-ten, aro 700. #Caloi City Tour
+#['sense','sense%20urban','sense%20move'
 # btwin, focus, pinarello, Soul, sundown, vicinitech, gancheira horizontal, gancheira pista, aventon, miyamura, sugino, dura Ace, shimano, chandan, Raf bikes, caloi 10, caloi 12, monark 10, peugeot 10, giant, audax, tsw, groove, oggi, riva, cernnunos, república, Ferroveló, caixinha, caixa, sunburst, airwalk, black flea, ColorBikes, eight bikes, nirve belmont, Eagle bikes, foffa, cubos rolamentados, flip flop, contra pedal, quadro fixa, bicicleta.
     # for j in ['raf','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single','bike%20fixa']:
 
@@ -124,9 +125,8 @@ datai = pd.DataFrame()
 # for i in ["SP","PR","SC","RS"]:
 # buscar bicicleta que foram roubadas pelo nome do anuncio, selecionar as bicicletas que estão com o valor abaixo da média onde poderia estar anunciada a bicicleta que foi roubada.
 #1/ sunburst, hotdog
-#2/ 8bike, rosa, @NaFlavia
-#Caloi City Tour
-#['sense','sense%20urban','sense%20move'
+#2/ 8bike, rosa
+
 for i in ["SP"]:
     for j in ['8bike', 'sunburst', 'hotdog', 'caixinha', 'caixa', 'bike%20fixa', 'bicicleta%20fixa', 'barra%20fixa', 'night%20riders']:
         print(j)
@@ -134,6 +134,6 @@ for i in ["SP"]:
         datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))
     
 datai.to_csv(f'dados_bike_busca.csv')
-print(datai)
+print(f'tamanho do dataframe {len(datai)}')
 
 print("Fim!")

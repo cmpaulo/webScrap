@@ -13,7 +13,7 @@ import requests
 # palavras para buscar [Airwalk, RAF, 8Bike, Nexus, Vicinitech, Tetrapode]
 
 def buscarDadosOLX(estado= "SP", regiao = "11", palavra = "fixa"):
-    regiaoBuscar = {"0":"","11":"sao-paulo-e-regiao"}
+    regiaoBuscar = {"0":"","11":"sao-paulo-e-regiao", "14":"norte-de-santa-catarina"}
     listaAnuncios = []
     estado = estado.lower()
     palavra = palavra.lower()
@@ -127,11 +127,20 @@ datai = pd.DataFrame()
 #1/ sunburst, hotdog
 #2/ 8bike, rosa
 
-for i in ["SP"]:
-    for j in ['8bike', 'sunburst', 'hotdog', 'caixinha', 'caixa', 'bike%20fixa', 'bicicleta%20fixa', 'barra%20fixa', 'night%20riders']:
-        print(j)
-        reg = "0"
-        datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))
+for i in ["SP","SC"]:
+    if i == "SP":
+        for j in ['8bike', 'sunburst', 'hotdog', 'caixinha', 'caixa', 'bike%20fixa', 'bicicleta%20fixa', 'barra%20fixa', 'night%20riders']:
+            print(j)
+            reg = "0"
+            datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))
+
+    elif i == "SC":
+        for j in ['lowlife', 'bike%20fixa', 'bicicleta%20fixa', 'barra%20fixa', 'night%20riders']:
+            print(j)
+            reg = "14"
+            datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))
+        
+    
     
 datai.to_csv(f'dados_bike_busca.csv')
 print(f'tamanho do dataframe {len(datai)}')

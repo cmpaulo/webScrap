@@ -128,7 +128,7 @@ datai = pd.DataFrame()
 #2/ 8bike, rosa
 
 for i in ["SP"]:
-    for j in ['8bike', 'sunburst', 'hotdog', 'caixinha', 'caixa', 'bike%20fixa', 'bicicleta%20fixa', 'barra%20fixa', 'night%20riders']:
+    for j in ['bicicleta elétrica','bicicleta elétrica e-moving','bicicleta elétrica sense breeze','bicicleta elétrica sense','Bicicleta Elétrica LEV']:
         print(j)
         reg = "0"
         datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))

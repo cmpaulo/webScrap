@@ -57,8 +57,8 @@ def related_res(data, name, related_words):
 data, name = clean_data('dados_bike_busca.csv')
 
 # clean data
-related_words = ['fixa', 'sunburst', 'hotdog', '8bike', '8','oito','rosa','urbana','single','night', 'riders', 'night riders']
-
+# related_words = ['fixa', 'sunburst', 'hotdog', '8bike', '8','oito','rosa','urbana','single','night', 'riders', 'night riders']
+related_words = ['bicicleta','elétrica','e-moving','sense', 'breeze','LEV']
 data_clean = related_res(data, name, related_words)
 
 # metricas

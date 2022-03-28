@@ -127,6 +127,7 @@ datai = pd.DataFrame()
 #1/ sunburst, hotdog
 #2/ 8bike, rosa
 
+<<<<<<< HEAD
 for i in ["SP","SC"]:
     if i == "SP":
         for j in ['8bike', 'sunburst', 'hotdog', 'caixinha', 'caixa', 'bike%20fixa', 'bicicleta%20fixa', 'barra%20fixa', 'night%20riders']:
@@ -141,6 +142,13 @@ for i in ["SP","SC"]:
             datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))
         
     
+=======
+for i in ["SP"]:
+    for j in ['bicicleta elétrica','bicicleta elétrica e-moving','bicicleta elétrica sense breeze','bicicleta elétrica sense','Bicicleta Elétrica LEV']:
+        print(j)
+        reg = "0"
+        datai = datai.append(buscarDadosOLX(estado = i, regiao = reg, palavra = j))
+>>>>>>> 4f5965c72e272f0358c3b4057a789161afb6855b
     
 datai.to_csv(f'dados_bike_busca.csv')
 print(f'tamanho do dataframe {len(datai)}')

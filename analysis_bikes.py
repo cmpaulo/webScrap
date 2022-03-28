@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import datetime as dtime
+from statistics import mean
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -57,13 +58,8 @@ def related_res(data, name, related_words):
 data, name = clean_data('dados_bike_busca.csv')
 
 # clean data
-<<<<<<< HEAD
-related_words = ['lowlife','fixa', 'sunburst', 'hotdog', '8bike', '8','oito','rosa','single','night', 'riders', 'night riders']
-
-=======
 # related_words = ['fixa', 'sunburst', 'hotdog', '8bike', '8','oito','rosa','urbana','single','night', 'riders', 'night riders']
 related_words = ['bicicleta','elétrica','e-moving','sense', 'breeze','LEV']
->>>>>>> 4f5965c72e272f0358c3b4057a789161afb6855b
 data_clean = related_res(data, name, related_words)
 
 # metricas
@@ -101,6 +97,8 @@ ax.set_yticklabels(means.index)
 plt.legend()
 plt.tight_layout()
 plt.savefig("./images/median_price_of_bike.png")
+# plt.show()
+# exit()
 
 plt.figure(figsize=(10, 7))
 ax = plt.axes()

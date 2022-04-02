@@ -22,7 +22,7 @@ class scrap_olx_ads():
         
     def buscarDadosOLX(self, estado= "SP", regiao = "11", palavra = "fixa"):
 
-        regiaoBuscar = {"0":"","11":"sao-paulo-e-regiao", "14":"norte-de-santa-catarina"}
+        regiaoBuscar = {"0":"","11":"sao-paulo-e-regiao"}
         estado = estado.lower()
         palavra = palavra.lower()
 
@@ -148,7 +148,7 @@ class scrap_olx_ads():
 
                         except:
 
-                            cidade = localiza
+                            cidade = ' '
                             bairro = ' '
                     
                         try:

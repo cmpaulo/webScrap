@@ -160,6 +160,8 @@ class scrap_olx_ads():
                         except:
 
                             cep = np.nan
+
+                            
                         objct_list = [diaPostagem,horaPostagem,codAnuncio,nomeBike,precoBike,cidade,bairro,cep,urlBike]
                         listaAnuncios.append(objct_list)
 

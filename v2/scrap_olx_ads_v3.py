@@ -202,8 +202,8 @@ class scrap_olx_ads():
         return data
 
 
-st.title('Buscar anuncios no OLX Brasil.')
-st.header("Buscar por palavra chave, selecione a categoria principal e depois escolha o estado. \n Click no botão Buscar anuncios")
+st.title('Buscar anuncios no OLX brasil.')
+st.header("Buscar por palabra chave, selecione a categoria principal e depois escolha o estado. \n Click no botão Buscar anuncios")
 
 text_input = st.text_input("Buscar por palavras chaves" )
 
@@ -241,3 +241,6 @@ if sigbtt:
         st.write("valor médio de {:.2f} reais".format(resultados['precoAds'].mean()))
         st.write(resultados.loc[resultados['precoAds'] < resultados['precoAds'].mean() ,['nomeAds','cidade','precoAds','urlAds']].drop_duplicates(keep='last').dropna() )
         st.write("Fim!")
+    st.write(f"valor médio de {resultados['precoAds'].mean()} reais")
+    st.table(resultados.loc[resultados['precoAds'] < resultados['precoAds'].mean() ,['nomeAds','cidade','precoAds','urlAds']].drop_duplicates(keep='last').dropna() )
+    st.write("Fim!")    

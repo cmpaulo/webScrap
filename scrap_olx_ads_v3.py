@@ -208,12 +208,12 @@ st.header("Buscar por palavra chave, selecione a categoria principal e depois es
 text_input = st.text_input("Buscar por palavras chaves" )
 
 def categorias_lista():
-    pth = "./cat_sub.txt"
+    pth = "cat_sub.txt"
     
     return pd.read_csv(pth)
 
 def estado_lista():
-    pth = "./estados.txt"
+    pth = "estados.txt"
     
     return pd.read_csv(pth)
 

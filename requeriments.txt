@@ -1,9 +1,0 @@
- beautifulsoup4
- lxml
- matplotlib
- numpy
- pandas
- requests
- tabulate
- virtualenv
- 

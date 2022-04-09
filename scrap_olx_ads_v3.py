@@ -202,18 +202,18 @@ class scrap_olx_ads():
         return data
 
 
-st.title('Buscar anuncios no OLX brasil.')
-st.header("Buscar por palabra chave, selecione a categoria principal e depois escolha o estado. \n Click no botão Buscar anuncios")
+st.title('Buscar anuncios no OLX Brasil.')
+st.header("Buscar por palavra chave, selecione a categoria principal e depois escolha o estado. \n Click no botão Buscar anuncios")
 
 text_input = st.text_input("Buscar por palavras chaves" )
 
 def categorias_lista():
-    pth = "/home/claudio/Documents/profissao_DS/projetos/Raspagem_web/webScrap/v2/cat_sub.txt"
+    pth = "./cat_sub.txt"
     
     return pd.read_csv(pth)
 
 def estado_lista():
-    pth = "/home/claudio/Documents/profissao_DS/projetos/Raspagem_web/webScrap/v2/estados.txt"
+    pth = "./estados.txt"
     
     return pd.read_csv(pth)
 
@@ -235,12 +235,10 @@ if sigbtt:
     busca = scrap_olx_ads(key_words=text_input,state=sel_estados,category=sel_catgorias)
     
     resultados = busca.ads_list()
+
     if len(resultados) == 0:
         st.write('refazer busca.')
     else:
         st.write("valor médio de {:.2f} reais".format(resultados['precoAds'].mean()))
-        st.write(resultados.loc[resultados['precoAds'] < resultados['precoAds'].mean() ,['nomeAds','cidade','precoAds','urlAds']].drop_duplicates(keep='last').dropna() )
+        st.markdown( resultados.loc[resultados['precoAds'] < resultados['precoAds'].mean() ,['nomeAds','cidade','precoAds','urlAds']].drop_duplicates(keep='last').dropna().to_markdown() )
         st.write("Fim!")
-    st.write(f"valor médio de {resultados['precoAds'].mean()} reais")
-    st.table(resultados.loc[resultados['precoAds'] < resultados['precoAds'].mean() ,['nomeAds','cidade','precoAds','urlAds']].drop_duplicates(keep='last').dropna() )
-    st.write("Fim!")    

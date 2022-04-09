@@ -91,7 +91,7 @@ class scrap_olx_ads():
         print(tpages)
 
 
-        for ipages in range(tpages+1):
+        for ipages in range(1,tpages+1):
 
             res_page = requests.get(url=self.url.replace('?',f'?o={ipages}&'), headers=self.PARAMS)
             soup = BeautifulSoup(res_page.content, 'lxml')
@@ -120,7 +120,7 @@ class scrap_olx_ads():
 
                         except:
 
-                            diaPostagem = np.nan
+                            diaPostagem = ' '
 
                         try:
 
@@ -128,7 +128,7 @@ class scrap_olx_ads():
 
                         except:
 
-                            horaPostagem = np.nan
+                            horaPostagem = ' '
 
                         try:
 
@@ -137,7 +137,7 @@ class scrap_olx_ads():
 
                         except:
 
-                            codAnuncio = np.nan
+                            codAnuncio = ' '
 
                         try:
 
@@ -159,7 +159,7 @@ class scrap_olx_ads():
 
                         except:
 
-                            cep = np.nan
+                            cep = ' '
 
                             
                         objct_list = [diaPostagem,horaPostagem,codAnuncio,nomeBike,precoBike,cidade,bairro,cep,urlBike]
@@ -195,8 +195,11 @@ for i in ["SP"]:
         reg = "0"
         res_page = busca.buscarDadosOLX(estado = i, regiao = reg, palavra = j)
         datai = datai.append(busca.n_pages(res_page=res_page))
-    
-datai.to_csv(f'dados_bike_busca.csv')
-print(f'tamanho do dataframe {len(datai)}')
 
-print("Fim!")
+if len(datai) > 0:
+    datai.to_csv(f'dados_bike_busca.csv')
+    print(f'tamanho do dataframe {len(datai)}')
+else:
+    print('Search empty')
+
+print("The end!")

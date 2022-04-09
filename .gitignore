@@ -7,12 +7,15 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+# insert new folder.
+# v2/
+v3/
+# #######
 .Python
 build/
 develop-eggs/
 dist/
 downloads/
-v2/
 eggs/
 .eggs/
 lib/

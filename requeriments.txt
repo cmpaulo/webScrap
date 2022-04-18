@@ -5,3 +5,4 @@ os
 pandas
 requests
 streamlit
+tabulate

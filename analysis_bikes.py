@@ -8,7 +8,6 @@ import pandas as pd
 def clean_data(name = ""):
 
     data = pd.read_csv(name, index_col='Unnamed: 0',header=0)
-        # 'str','str','int','str','float','str','str','str','str'
 
     data = data.drop_duplicates(keep='last').dropna()
 
@@ -42,9 +41,9 @@ data, name = clean_data('busca_bike_dados.csv')
 
 
 # clean data
-# 'raf','sprinter','8bike', 'fixie', 'nexus','tetrapode'
-related_words = ['8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single', 'urbana', 'bike fixa', 'fixie', 'nexus','tetrapode']
-# # related_words = ['bicicleta','elétrica','e-moving','sense', 'breeze','LEV']
+
+related_words = ['bike fixa','las magrelas', 'raf','raf bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single']
+
 data_clean = related_res(data, name, related_words)
 
 data_clean['valueBike'] = pd.to_numeric(data_clean['valueBike'].values)

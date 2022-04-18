@@ -200,7 +200,7 @@ busca = scrap_olx_ads()
 
 for i in ["SP"]:
 
-    for j in ['']:
+    for j in ['bike%20fixa','las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single']:
 
         print(j)
         reg = "0"

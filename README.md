@@ -1,5 +1,5 @@
 # webScrap
-[![scraper-ads](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml/badge.svg)](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml)
+[![scraper-ads](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml/badge.svg?branch=main)](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml)
 
 <!-- ingles -->
 
@@ -43,7 +43,7 @@ The images are updated every 12 hours, and show the result of the search for key
 
 The data obtained allows answers to questions with a graphic presentation of the average value of bicycles per city.
 
-The result of ads with a value lower than the average value of ads in the state of são paulo is in the table in markdown [TMD](/busca_bike_dados.md).
+The result of ads with a value lower than the average value of ads in the state of são paulo is in the table in markdown [TMD](/busca_bike_dados.md) and to check the complete table only of the items related to the search in this [Complete results](/dados_bike_busca_clean.csv)
 
 ![graphnumber](/images/median_price_of_bike.png)
 

@@ -4,10 +4,10 @@
 
 from bs4 import BeautifulSoup
 import numpy as np
+import os
 import pandas as pd
 import requests
 import streamlit as st
-import os
 
 
 # @st.cache()
@@ -236,11 +236,12 @@ if sigbtt:
 
     page = download_page(url)
     
-    rslt_data = ads_list(page, url)
+    # rslt_data = ads_list(page, url)
 
     
     if os.path.exists('temp_ads_search.csv'):
         rslt_data = pd.read_csv('temp_ads_search.csv',header=0,index_col=0, na_filter=True, na_values=' ')
+        st.write('Usando informações temporarias')
 
 
     rslt_data['valueAds'] = pd.to_numeric(rslt_data['valueAds'].values)

@@ -115,5 +115,5 @@ else:
 ax.set_title('Número de anúncios de bicicletas fixa nas cidades do Estado de São Paulo')
 
 plt.tight_layout()
-# plt.savefig("./images/number_of_ads_bycity.png")
+plt.savefig("./images/number_of_ads_bycity.png")
 plt.show()

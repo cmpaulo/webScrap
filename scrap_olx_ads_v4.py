@@ -9,7 +9,7 @@ import requests
 import streamlit as st
 
 
-@st.cache()
+# @st.cache()
 def download_page(url1):
 
     PARAMS = {
@@ -43,8 +43,8 @@ def remove_accents(wwrd):
 # @st.cache()
 def olxAdress(key_words = "fixa", category = "ciclismo", state = "São Paulo :: SP", locate="DDD"):
 
-    estado = state.split('::')[1].strip().lower()
-    palavra = key_words.lower().replace(" ","%20")
+    statelow = state.split('::')[1].strip().lower()
+    target_key = key_words.lower().replace(" ","%20")
     categor = remove_accents(category.lower().replace(' ','-'))
         
     region = locate
@@ -52,9 +52,9 @@ def olxAdress(key_words = "fixa", category = "ciclismo", state = "São Paulo :: 
 
 
     if categor == "todas-as-categorias":
-        url = f"https://{estado}.olx.com.br/?q={palavra}&sf=1"    
+        url = f"https://{statelow}.olx.com.br/?q={target_key}&sf=1"    
     else:
-        url = f"https://{estado}.olx.com.br/{categor}?q={palavra}&sf=1"    
+        url = f"https://{statelow}.olx.com.br/{categor}?q={target_key}&sf=1"    
 
     return url
 
@@ -64,12 +64,12 @@ def npages(page):
     soup = BeautifulSoup(page.content, 'lxml')
 
     try:
-        nResultadosBusca = soup.find_all("span", class_="sc-1mi5vq6-0 eDXljX sc-ifAKCX fhJlIo")[0].contents[0]
+        nResults = soup.find_all("span", class_="sc-1mi5vq6-0 eDXljX sc-ifAKCX fhJlIo")[0].contents[0]
 
-        if 'resultados' in nResultadosBusca:
+        if 'resultados' in nResults:
 
-            resultados = nResultadosBusca.split(" ")
-            tpages = int( int( resultados[-2].replace(".","") ) / int(resultados[-4]) )
+            results = nResults.split(" ")
+            tpages = int( int( results[-2].replace(".","") ) / int(results[-4]) )
 
     except:
             print("erro paginas")
@@ -77,17 +77,17 @@ def npages(page):
     
     
     if int(tpages) > 10:
-        print(f'A busca retornou {tpages} páginas')
 
+        print(f'Number of results is {tpages} pages')
 
         tpages = 3
     
-    print(tpages, 'páginas')
+    print(tpages, 'pages')
 
     return tpages
 
 
-@st.cache()
+# @st.cache()
 def ads_list(page, url1):
 
     listaAnuncios=[]

@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from re import L
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
@@ -117,24 +118,15 @@ class scrap_olx_ads():
                         if codeAd is self.base_codes or codeAd == ' ':
                             continue
 
-                        try: #open ads
+                        try: #open ads and get informations
                             
                             page2 = requests.get(url=urlBike, headers=self.PARAMS)
                             soupsp = BeautifulSoup(page2.content, 'lxml')
 
                             try:
-                                cep = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[0].contents[0]
-
-                            except:
-
-                                cep = ' '
-
-                            try:
                                 # converting from BR presentation of numbers
                                 valueBike = soupsp.find_all("h2", class_="sc-1wimjbb-2 iUSogS sc-ifAKCX cmFKIN")[0].contents[0].split("R$ ")[1].replace('.','')
                                 valueBike = float(valueBike)
-                                print(valueBike)
-                                break
 
                             except:
 
@@ -142,46 +134,47 @@ class scrap_olx_ads():
 
                             try:
 
-                                dayPost = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[0].contents[0]
+                                daytimePost = soupsp.find_all("span", class_="sc-1oq8jzc-0 jvuXUB sc-ifAKCX fizSrB")[0].contents[2].split(' às ')
+                                dayPost = daytimePost[0]
+                                timePost = daytimePost[1]
 
                             except:
 
                                 dayPost = ' '
-
-                            try:
-
-                                timePost = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[1].contents[0]
-
-                            except:
-
                                 timePost = ' '
 
+                            try:
+
+                                cep = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[0].contents[0]
+                                city = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[1].contents[0]
+                                                                
+                            except:
+
+                                cep = ' '
+                                city = ' '
 
                             try:
 
-                                locate = item.find_all("span", class_="sc-7l84qu-1 ciykCV sc-ifAKCX dpURtf")[0].contents[0]
-                                locs = locate.split(',')
-                                city = locs[0]
-                                neighborhood = locs[1]
+                                neighborhood = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[2].contents[0]
 
                             except:
 
-                                city = ' '
                                 neighborhood = ' '
-                        
-                                
+
+
                             objct_list = [dayPost,timePost,codeAd,nameBike,valueBike,city,neighborhood,cep,urlBike]
                             
                             for ki,kd in enumerate(self.dic_temp.keys()):
                                 
                                 self.dic_temp[kd].append(objct_list[ki])
+                       
                         except:
-                            print("Not found ads.")
-                            
+                            print("Not link of found ads.")
+
                             for ki,kd in enumerate(self.dic_temp.keys()):
 
                                 self.dic_temp[kd].append(np.nan)
-
+        
 
                     except:
 
@@ -198,7 +191,7 @@ class scrap_olx_ads():
 # Specialized Langster, Caloi, Aço Hi-ten, aro 700. #Caloi City Tour
 #['sense','sense%20urban','sense%20move'
 # btwin, focus, pinarello, Soul, sundown, vicinitech, gancheira horizontal, gancheira pista, aventon, miyamura, sugino, dura Ace, shimano, chandan, Raf bikes, caloi 10, caloi 12, monark 10, peugeot 10, giant, audax, tsw, groove, oggi, riva, cernnunos, república, Ferroveló, caixinha, caixa, sunburst, airwalk, black flea, ColorBikes, eight bikes, nirve belmont, Eagle bikes, foffa, cubos rolamentados, flip flop, contra pedal, quadro fixa, bicicleta.
-    # for j in ['raf','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single','bike%20fixa']:
+    # for j in ['bike%20fixa', 'raf','raf bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single','bike%20fixa']:
 
 datai = pd.DataFrame()
 
@@ -207,7 +200,7 @@ busca = scrap_olx_ads()
 
 for i in ["SP"]:
 
-    for j in ['bike%20fixa', 'fixie', 'nexus','tetrapode']:
+    for j in ['']:
 
         print(j)
         reg = "0"

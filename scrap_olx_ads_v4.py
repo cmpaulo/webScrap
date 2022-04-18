@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import requests
 import streamlit as st
+import os
 
 
 # @st.cache()
@@ -90,102 +91,105 @@ def npages(page):
 # @st.cache()
 def ads_list(page, url1):
 
-    listaAnuncios=[]
+    base_codes = []
+    dic_temp = {'dayPost':[], 'timePost':[], 'codeAd':[], 'nameAds':[], 'valueAds':[], 'city':[], 'neighborhood':[], 'cep':[], 'urlAds':[]}
 
     tpage = npages(page)
     
-    data = pd.DataFrame()
-    
-    for ipages in range(1,tpage+1):
-        
-        print('\\\\\\\\\\\ \\\\\\\\\\\\\\\\\\ ',url1)
+    soup = BeautifulSoup(page.content, 'lxml')
 
-        res_page = download_page(url=url1.replace('?',f'?o={ipages}&'))
-        soup = BeautifulSoup(res_page.content, 'lxml')
+    for itens in soup.find_all("ul", {"class": "sc-1fcmfeb-1 kntIvV"}):
 
-        for itens in soup.find_all("ul", {"class": "sc-1fcmfeb-1 kntIvV"}):
+        for item in itens.find_all("li"):
 
-            for item in itens.find_all("li"):
-
-                try:
-                    
-                    nomeAds = item.find_all('h2')[0].contents[0]
-
-                    try:
-
-                        precoAds = item.find_all("span", class_="sc-ifAKCX eoKYee")[0].contents[0].split("R$")[1].replace('.','')
-                        precoAds = np.float64(precoAds.replace(',','.'))
-                        print(precoAds)
-
-                    except:
-
-                        precoAds = np.nan
-
-                    try:
-
-                        diaPostagem = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[0].contents[0]
-
-                    except:
-
-                        diaPostagem = np.nan
-
-                    try:
-
-                        horaPostagem = item.find_all("span", class_="wlwg1t-1 fsgKJO sc-ifAKCX eLPYJb")[1].contents[0]
-
-                    except:
-
-                        horaPostagem = np.nan
-
-                    try:
-
-                        urlAds = item.find('a')['href']
-                        codAnuncio = urlAds.split('-')[-1]
-
-                    except:
-
-                        codAnuncio = np.nan
-
-                    try:
-
-                        localiza = item.find_all("span", class_="sc-7l84qu-1 ciykCV sc-ifAKCX dpURtf")[0].contents[0]
-                        locais = localiza.split(',')
-                        cidade = locais[0]
-                        bairro = locais[1]
-
-                    except:
-
-                        cidade = np.nan
-                        bairro = np.nan
+            try:
                 
-                    try:
-                        
-                        page2 = download_page(url=urlAds)
-                        soupsp = BeautifulSoup(page2.content, 'lxml')
-                        cep = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[0].contents[0]
+                nameAds = item.find_all('h2')[0].contents[0]
+                
+                try:
 
-                    except:
-
-                        cep = np.nan
-                    
-                    
-                    objct_list = [diaPostagem, horaPostagem, codAnuncio, nomeAds, precoAds, cidade, bairro, cep, urlAds]
-                    listaAnuncios.append(objct_list)
+                    urlAds = item.find('a')['href']
+                    codeAd = urlAds.split('-')[-1]
 
                 except:
 
-                    print("Not found ads.")
-                    listaAnuncios.append(np.ones(len(objct_list))*np.nan )
+                    codeAd = ' '
+                
+                # remove duplicates during the scrapping ads.
+                if (codeAd is base_codes) or codeAd == ' ':
+                    continue
+
+                try: #open ads and get informations
+                    
+                    page2 = download_page(urlAds)
+                    soupsp = BeautifulSoup(page2.content, 'lxml')
+
+                    try:
+                        # converting from BR presentation of numbers
+                        valueAds = soupsp.find_all("h2", class_="sc-1wimjbb-2 iUSogS sc-ifAKCX cmFKIN")[0].contents[0].split("R$ ")[1].replace('.','')
+                        valueAds = float(valueAds)
+
+                    except:
+
+                        valueAds = np.nan
+
+                    try:
+
+                        daytimePost = soupsp.find_all("span", class_="sc-1oq8jzc-0 jvuXUB sc-ifAKCX fizSrB")[0].contents[2].split(' às ')
+                        dayPost = daytimePost[0]
+                        timePost = daytimePost[1]
+
+                    except:
+
+                        dayPost = ' '
+                        timePost = ' '
+
+                    try:
+
+                        cep = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[0].contents[0]
+                        city = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[1].contents[0]
+                                                        
+                    except:
+
+                        cep = ' '
+                        city = ' '
+
+                    try:
+
+                        neighborhood = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[2].contents[0]
+
+                    except:
+
+                        neighborhood = ' '
+
+
+                    objct_list = [dayPost,timePost,codeAd,nameAds,valueAds,city,neighborhood,cep,urlAds]
+                    
+                    for ki,kd in enumerate(dic_temp.keys()):
+                        
+                        dic_temp[kd].append(objct_list[ki])
+                
+                except:
+                    print("Not link of found ads.")
+
+                    for ki,kd in enumerate(dic_temp.keys()):
+
+                        dic_temp[kd].append(np.nan)
+
+
+            except:
+
+                print("Not found ads.")
+
+                for ki,kd in enumerate(dic_temp.keys()):
+
+                    dic_temp[kd].append(np.nan)
+        
+        dic_temp_df = pd.DataFrame(dic_temp)
+        dic_temp_df.to_csv('temp_ads_search.csv')
+        return dic_temp_df
 
     
-            name = ['diaPostagem', 'hora','codigo','nomeAds','precoAds','cidade','bairro','cep','urlAds']
-            
-            data = data.append(pd.DataFrame(listaAnuncios, columns=name))
-            data.to_csv('dados_Ads_sp.csv')
-
-    
-    return data
-
 
 st.title('Buscar anúncios no OLX Brasil.')
 st.header("Buscar por palavra chave, selecione a categoria principal e depois escolha o estado. \n Click no botão Buscar anuncios")
@@ -195,18 +199,23 @@ text_input = st.text_input("Buscar por palavras chaves" )
 
 @st.cache()
 def categorias_lista():
+
     pth = "cat_sub.txt"
     
     return pd.read_csv(pth)
 
 @st.cache()
 def estado_lista():
+
     pth = "estados.txt"
     
     return pd.read_csv(pth)
-    
+
+
 cat_df = categorias_lista()
+
 estado_df = estado_lista()
+
 
 sel_catgorias = st.selectbox('Escolha uma categoria', cat_df )
 
@@ -215,22 +224,31 @@ sel_estados =  st.selectbox('Escolha o estado', estado_df)
 
 sigbtt = st.button("Buscar anuncios")
 
+
 st.write("Os resultados serão apresentados em um tabela logo abaixo.")
 
+
 if sigbtt:
+
     st.write(f'Buscando anuncios com as palavras {text_input} em {sel_estados} ...')
     
     url = olxAdress(key_words=text_input,state=sel_estados,category=sel_catgorias)
 
     page = download_page(url)
     
-    print(url)
-    
-    resultados = ads_list(page, url)
+    rslt_data = ads_list(page, url)
 
-    if len(resultados) == 0:
+    
+    if os.path.exists('temp_ads_search.csv'):
+        rslt_data = pd.read_csv('temp_ads_search.csv',header=0,index_col=0, na_filter=True, na_values=' ')
+
+
+    rslt_data['valueAds'] = pd.to_numeric(rslt_data['valueAds'].values)
+    
+
+    if len(rslt_data) == 0:
         st.write('refazer busca.')
     else:
-        st.write("valor médio de {:.2f} reais".format(resultados['precoAds'].mean()))
-        st.markdown( resultados.loc[resultados['precoAds'] < resultados['precoAds'].mean() ,['nomeAds','cidade','precoAds','urlAds']].drop_duplicates(keep='last').dropna().to_markdown() )
+        st.write("valor médio de {:.2f} reais".format(rslt_data['valueAds'].mean()))
+        st.markdown( rslt_data.loc[rslt_data['valueAds'] < rslt_data['valueAds'].mean() ,['nameAds','city','valueAds','urlAds']].drop_duplicates(keep='last').sort_values('valueAds',ascending=False).to_markdown() )
         st.write("Fim!")

@@ -69,21 +69,17 @@ class scrap_olx_ads():
         
         soup = BeautifulSoup(res_page.content, 'lxml')
 
-        nRes = soup.find_all("span", class_="sc-1mi5vq6-0 eDXljX sc-ifAKCX fhJlIo")[0].contents[0]
+        try:
+            nRes = soup.find_all("span", class_="sc-1mi5vq6-0 eDXljX sc-ifAKCX fhJlIo")[0].contents[0]
 
+            if 'resultados' in nRes:
 
-        if len(nRes) > 20:
+                tpages = int( int( nRes.split(" ")[-2].replace(".","") ) / 50 )
 
-            try:
+        except:
 
-                if 'resultados' in nRes:
-
-                    tpages = int( int( nRes.split(" ")[-2].replace(".","") ) / 50 )
-
-            except:
-
-                print("erro paginas")
-                tpages = 0
+            print("erro paginas")
+            tpages = 0
         
         if int(tpages) > 10:
 

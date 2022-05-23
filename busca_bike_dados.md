@@ -1,2 +1,6 @@
-| dayPost   | nameBike   | city   | valueBike   | urlBike   |
-|-----------|------------|--------|-------------|-----------|
+| dayPost   | nameBike                                            | city                   |   valueBike | urlBike                                                                                                                       |
+|:----------|:----------------------------------------------------|:-----------------------|------------:|:------------------------------------------------------------------------------------------------------------------------------|
+| 11/05     | Pedivela Shimano Alívio Integrado Single usado      | São Luiz do Paraitinga |         400 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/pedivela-shimano-alivio-integrado-single-usado-1031290117      |
+| 16/05     | Kit grupo p/ Bike Fixa - Single                     | São Carlos             |         290 | https://sp.olx.com.br/regiao-de-ribeirao-preto/ciclismo/kit-grupo-p-bike-fixa-single-1033312308                               |
+| 27/04     | Coroa Shimano direct mount 32d 12velocidades single | São José dos Campos    |         200 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/coroa-shimano-direct-mount-32d-12velocidades-single-1025678855 |
+| 21/05     | Pedivela fixa / single                              | São Paulo              |         100 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/pedivela-fixa-single-1028999070                                             |

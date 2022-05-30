@@ -70,7 +70,8 @@ class scrap_olx_ads():
         soup = BeautifulSoup(res_page.content, 'lxml')
 
         try:
-            nRes = soup.find_all("span", class_="sc-1mi5vq6-0 eDXljX sc-ifAKCX fhJlIo")[0].contents[0]
+
+            nRes = soup.find_all("span", class_="sc-1mi5vq6-0 eDXljX sc-bdVaJa juraBY")[0].contents[0]
 
             if 'resultados' in nRes:
 
@@ -199,8 +200,7 @@ for i in ["SP"]:
     for j in ['bike%20fixa','las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single']:
 
         print(j)
-        reg = "0"
-        res_page = busca.initial_configs(state = i, region = reg, target_word = j)
+        res_page = busca.initial_configs(state = i, region = "0", target_word = j)
         dados_busca = busca.search_ads(res_page=res_page)
         
         if len(dados_busca) > 0:

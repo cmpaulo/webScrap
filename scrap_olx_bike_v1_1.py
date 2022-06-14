@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-from re import L
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
@@ -127,7 +126,7 @@ class scrap_olx_ads():
 
                             except:
 
-                                valueBike = ' '
+                                valueBike = np.nan
 
                             try:
 
@@ -147,8 +146,8 @@ class scrap_olx_ads():
                                                                 
                             except:
 
-                                cep = ' '
-                                city = ' '
+                                cep = '00000000'
+                                city = 'undef'
 
                             try:
 
@@ -156,7 +155,7 @@ class scrap_olx_ads():
 
                             except:
 
-                                neighborhood = ' '
+                                neighborhood = 'undef'
 
 
                             objct_list = [dayPost,timePost,codeAd,nameBike,valueBike,city,neighborhood,cep,urlBike]
@@ -197,7 +196,7 @@ busca = scrap_olx_ads()
 
 for i in ["SP"]:
 
-    for j in ['bike%20fixa','las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single']:
+    for j in ['bike%20fixa','las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli']:
 
         print(j)
         res_page = busca.initial_configs(state = i, region = "0", target_word = j)
@@ -206,8 +205,8 @@ for i in ["SP"]:
         if len(dados_busca) > 0:
 
             dados_busca = pd.DataFrame(dados_busca)
-            datai = datai.append(dados_busca)
-
+            datai =  pd.concat([datai, dados_busca], ignore_index=True)
+            print(len(datai), len(dados_busca))
         else:
 
             continue

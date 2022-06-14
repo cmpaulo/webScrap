@@ -39,7 +39,6 @@ def related_res(data, name, related_words):
 
 data, name = clean_data('busca_bike_dados.csv')
 
-
 # clean data
 
 related_words = ['bike fixa','las magrelas', 'raf','raf bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single']
@@ -47,7 +46,9 @@ related_words = ['bike fixa','las magrelas', 'raf','raf bike','sprinter','8bike'
 data_clean = related_res(data, name, related_words)
 
 data_clean['valueBike'] = pd.to_numeric(data_clean['valueBike'].values)
-# # metricas
+print(data_clean.loc[:15,['valueBike']])
+
+# # metrics
 metrica = plt.boxplot(data_clean['valueBike'])
 captop = metrica['caps'][1].get_ydata()[0]
 caplow = metrica['caps'][0].get_ydata()[0]

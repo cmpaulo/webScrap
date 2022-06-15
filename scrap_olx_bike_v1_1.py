@@ -206,7 +206,7 @@ for i in ["SP"]:
 
             dados_busca = pd.DataFrame(dados_busca)
             datai =  pd.concat([datai, dados_busca], ignore_index=True)
-            print(len(datai), len(dados_busca))
+
         else:
 
             continue

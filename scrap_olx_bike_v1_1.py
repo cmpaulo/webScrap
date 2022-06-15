@@ -126,7 +126,7 @@ class scrap_olx_ads():
 
                             except:
 
-                                valueBike = np.nan
+                                valueBike = 0.0
 
                             try:
 

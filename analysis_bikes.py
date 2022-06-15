@@ -32,7 +32,7 @@ def related_res(data, name, related_words):
 
     data.reset_index(inplace=True,drop=True)
     
-    data.to_csv(f'{name.split(".")[0]}_clean.csv')
+    data.to_csv('{}'.format(name.replace(".csv",'_clean.csv')))
     
     return data
 
@@ -46,7 +46,6 @@ related_words = ['bike fixa','las magrelas', 'raf','raf bike','sprinter','8bike'
 data_clean = related_res(data, name, related_words)
 
 data_clean['valueBike'] = pd.to_numeric(data_clean['valueBike'].values)
-print(data_clean.loc[:15,['valueBike']])
 
 # # metrics
 metrica = plt.boxplot(data_clean['valueBike'])
@@ -61,7 +60,7 @@ means = dataK.groupby('city').mean().sort_values('valueBike',ascending=False)['v
 Lower_mean_ads = dataK.sort_values('valueBike',ascending=False)
 ads = Lower_mean_ads[Lower_mean_ads['valueBike'].values < means.mean()]
 ads_mkdw = ads.loc[:,['dayPost', 'nameBike', 'city','valueBike','urlBike']]
-ads_mkdw.to_markdown(f'{name.split(".")[0]}.md',index=False)
+ads_mkdw.to_markdown('{}'.format(name.replace(".csv",'.md')),index=False)
 
 counts_anuncios = dataK.groupby('city').count().sort_values('valueBike',ascending=False)['valueBike']
 

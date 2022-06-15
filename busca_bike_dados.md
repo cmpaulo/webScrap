@@ -1,9 +1,10 @@
-| dayPost   | nameBike                              | city      |   valueBike | urlBike                                                                                            |
-|:----------|:--------------------------------------|:----------|------------:|:---------------------------------------------------------------------------------------------------|
-| 31/05     | Bike fixa caixinha + brindes          | São Paulo |        1250 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caixinha-brindes-1039375901            |
-| 13/06     | Bike fixa Caloi 10 1979               | São Paulo |        1200 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-10-1979-1042377433               |
-| 10/06     | Bike fixa                             | Tremembé  |        1200 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/bike-fixa-1043418146                |
-| 12/06     | Monark 10 Single Speed                | Santos    |        1000 | https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/monark-10-single-speed-1044210535    |
-| 04/06     | Fixa / Single speed                   | São Paulo |         900 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/fixa-single-speed-1041263178                     |
-| 08/06     | Bike single speed. Roda livre 700.    | São Paulo |         800 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-single-speed-roda-livre-700-1042723307      |
-| 30/05     | Coroa 54 dentes 130BCD para bike fixa | São Paulo |         100 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/coroa-54-dentes-130bcd-para-bike-fixa-1038727960 |
+| dayPost   | nameBike                               | city      |   valueBike | urlBike                                                                                             |
+|:----------|:---------------------------------------|:----------|------------:|:----------------------------------------------------------------------------------------------------|
+| 31/05     | Bike fixa caixinha + brindes           | São Paulo |        1250 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caixinha-brindes-1039375901             |
+| 13/06     | Bike fixa Caloi 10 1979                | São Paulo |        1200 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-10-1979-1042377433                |
+| 10/06     | Bike fixa                              | Tremembé  |        1200 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/bike-fixa-1043418146                 |
+| 12/06     | Monark 10 Single Speed                 | Santos    |        1000 | https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/monark-10-single-speed-1044210535     |
+| 04/06     | Fixa / Single speed                    | São Paulo |         900 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/fixa-single-speed-1041263178                      |
+| 08/06     | Bike single speed. Roda livre 700.     | São Paulo |         800 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-single-speed-roda-livre-700-1042723307       |
+| 30/05     | Coroa 54 dentes 130BCD para bike fixa  | São Paulo |         100 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/coroa-54-dentes-130bcd-para-bike-fixa-1038727960  |
+| 01/06     | Peças para bicicleta Fixa speed single | São Paulo |          15 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/pecas-para-bicicleta-fixa-speed-single-1039596916 |

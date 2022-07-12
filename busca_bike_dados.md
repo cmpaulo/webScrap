@@ -1,8 +1,8 @@
 | dayPost   | nameBike                            | city                  |   valueBike | urlBike                                                                                              |
 |:----------|:------------------------------------|:----------------------|------------:|:-----------------------------------------------------------------------------------------------------|
-| 26/06     | Vendo Bike Fixa / Single Raf        | Taubaté               |        1990 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/vendo-bike-fixa-single-raf-1050270363 |
 | 10/07     | Rodas de bike fixa.                 | Pindamonhangaba       |        1800 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/rodas-de-bike-fixa-1048267190         |
 | 10/07     | Bike Fixa Raf                       | Sorocaba              |        1800 | https://sp.olx.com.br/regiao-de-sorocaba/ciclismo/bike-fixa-raf-1053684962                           |
+| 26/06     | Vendo Bike Fixa / Single Raf        | Taubaté               |        1600 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/vendo-bike-fixa-single-raf-1050270363 |
 | 03/07     | Bike fixa                           | São Bernardo do Campo |        1500 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-1053246487                               |
 | 08/07     | Bike fixa                           | São Paulo             |        1200 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-1055309535                               |
 | 27/06     | Bike fixa Caloi 10 1979             | São Paulo             |        1200 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-10-1979-1042377433                 |

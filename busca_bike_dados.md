@@ -3,11 +3,10 @@
 | 12/07     | Rodas de bike fixa.                 | Pindamonhangaba       |        1800 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/rodas-de-bike-fixa-1048267190         |
 | 26/06     | Vendo Bike Fixa / Single Raf        | Taubaté               |        1600 | https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/vendo-bike-fixa-single-raf-1050270363 |
 | 03/07     | Bike fixa                           | São Bernardo do Campo |        1500 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-1053246487                               |
-| 20/07     | Bike fixa                           | São Paulo             |        1250 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-1060677497                               |
-| 20/07     | Bike fixa                           | São Paulo             |        1250 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-1060692854                               |
 | 18/07     | Bike fixa Caloi 10 ano 1979         | São Paulo             |        1000 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-10-ano-1979-1059737697             |
-| 18/07     | Bike fixa Caloi 10 ano 1979         | São Paulo             |        1000 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-10-ano-1979-1059772640             |
 | 15/07     | Monark 10 Single Speed              | Santos                |        1000 | https://sp.olx.com.br/baixada-santista-e-litoral-sul/ciclismo/monark-10-single-speed-1058845459      |
+| 18/07     | Bike fixa Caloi 10 ano 1979         | São Paulo             |        1000 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-10-ano-1979-1059772640             |
+| 20/07     | Bike fixa                           | São Paulo             |        1000 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-1060692854                               |
 | 13/07     | Bike fixa caloi 10                  | São Paulo             |         800 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-10-1057622595                      |
 | 08/07     | BIKE FIXA / CALOI 10 FIXA + BRINDES | Guarulhos             |         800 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-caloi-10-fixa-brindes-1055586489         |
 | 02/07     | Bike fixa                           | São Paulo             |         400 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-1052813495                               |

@@ -1,2 +1,8 @@
-| dayPost   | nameBike   | city   | valueBike   | urlBike   |
-|-----------|------------|--------|-------------|-----------|
+| dayPost   | nameBike                                                       | city                  |   valueBike | urlBike                                                                                                                  |
+|:----------|:---------------------------------------------------------------|:----------------------|------------:|:-------------------------------------------------------------------------------------------------------------------------|
+| 02/01     | Oportunidade - Bike single speed "Caixinha" - BAIXOU O PREÇO   | Sorocaba              |        1000 | https://sp.olx.com.br/regiao-de-sorocaba/ciclismo/oportunidade-bike-single-speed-caixinha-baixou-o-preco-1127927801      |
+| 22/01     | Bike fixa Tetrapode                                            | Limeira               |         980 | https://sp.olx.com.br/grande-campinas/ciclismo/bike-fixa-tetrapode-1132508391                                            |
+| 26/12     | Bike fixa usada                                                | São Paulo             |         900 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-usada-1125830217                                             |
+| 06/01     | Bicicleta alumínio single ou fixa Caloi                        | São Paulo             |         800 | https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-aluminio-single-ou-fixa-caloi-1130021223                     |
+| 10/01     | Caloi 10 quadro,aro 700 e freio shimano para montar fixed gear | Santa Bárbara D'Oeste |         750 | https://sp.olx.com.br/grande-campinas/ciclismo/caloi-10-quadro-aro-700-e-freio-shimano-para-montar-fixed-gear-1131556869 |
+| 28/12     | Bike fixa                                                      | Ribeirão Preto        |         550 | https://sp.olx.com.br/regiao-de-ribeirao-preto/ciclismo/bike-fixa-1126484097                                             |

@@ -2,6 +2,10 @@
 [![scraper-ads](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml/badge.svg?branch=main)](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml)
 
 <!-- ingles -->
+This code is scraping the OLX website for ads that contain the keyword "fixie" in the São Paulo region and collecting information about the ads found. It uses the BeautifulSoup library to navigate the HTML structure of 
+the page and find the desired elements. It saves the collected information in a dictionary "data" that includes the day and time the ad was posted, the ad's code, the bike's name, the price, the city, 
+the neighborhood, the zip code and the ad's URL. It also checks if the ad code has already been collected before to avoid duplicates.
+
 
 # WebScraping first step.
 

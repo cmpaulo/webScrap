@@ -1,16 +1,12 @@
 #!/usr/bin/python
-
+"""This code is scraping the OLX website for ads that contain the keyword "fixie" in the São Paulo region and collecting information about the ads found. It uses the BeautifulSoup library to navigate the HTML structure of 
+the page and find the desired elements. It saves the collected information in a dictionary "data" that includes the day and time the ad was posted, the ad's code, the bike's name, the price, the city, 
+the neighborhood, the zip code and the ad's URL. It also checks if the ad code has already been collected before to avoid duplicates.
+"""
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
 import requests
-
-# https://sp.olx.com.br/ciclismo?q=bike%20fixa
-# https://sp.olx.com.br/sao-paulo-e-region/ciclismo?q=bike%20fixa
-# https://sp.olx.com.br/sao-paulo-e-region/ciclismo?o=2&q=bike%20fixa
-# meltime o try para obter mais resultados.
-# Obtém a URL
-# target_words para buscar [Airwalk, RAF, 8Bike, Nexus, Vicinitech, Tetrapode]
 
 
 class scrap_olx_ads():
@@ -19,7 +15,6 @@ class scrap_olx_ads():
     def __init__(self):
         self.base_codes = []
         self.dic_temp = {'dayPost':[], 'timePost':[], 'codeAd':[], 'nameBike':[], 'valueBike':[], 'city':[], 'neighborhood':[], 'cep':[], 'urlBike':[]}
-
 
         
     def initial_configs(self, state= "SP", region = "11", target_word = "fixa"):
@@ -65,12 +60,11 @@ class scrap_olx_ads():
     
     def search_ads(self, res_page):
 
-        
         soup = BeautifulSoup(res_page.content, 'lxml')
 
         try:
 
-            nRes = soup.find_all("span", class_="sc-1mi5vq6-0 eDXljX sc-bdVaJa juraBY")[0].contents[0]
+            nRes = soup.find_all("span", class_="sc-1mi5vq6-0 dQbOE sc-ifAKCX lgjPoE")[0].contents[0]
 
             if 'resultados' in nRes:
 
@@ -100,7 +94,7 @@ class scrap_olx_ads():
                     try:
                         
                         nameBike = item.find_all('h2')[0].contents[0]
-                        
+                                                
                         try:
 
                             urlBike = item.find('a')['href']
@@ -114,14 +108,16 @@ class scrap_olx_ads():
                         if codeAd is self.base_codes or codeAd == ' ':
                             continue
 
-                        try: #open ads and get informations
+                        try: #open ads and get informations enter on ads and get price
                             
                             page2 = requests.get(url=urlBike, headers=self.PARAMS)
                             soupsp = BeautifulSoup(page2.content, 'lxml')
 
                             try:
                                 # converting from BR presentation of numbers
-                                valueBike = soupsp.find_all("h2", class_="sc-1wimjbb-2 iUSogS sc-ifAKCX cmFKIN")[0].contents[0].split("R$ ")[1].replace('.','')
+                                # ad__sc-1wimjbb-1 hoHpcC sc-drMfKT ghWwwU
+                                # sc-1wimjbb-2 iUSogS sc-ifAKCX cmFKIN
+                                valueBike = soupsp.find_all("h2", class_="ad__sc-1wimjbb-1 hoHpcC sc-cooIXK cXlgiS")[0].contents[0].split("R$ ")[1].replace('.','')
                                 valueBike = float(valueBike)
 
                             except:
@@ -130,7 +126,7 @@ class scrap_olx_ads():
 
                             try:
 
-                                daytimePost = soupsp.find_all("span", class_="sc-1oq8jzc-0 jvuXUB sc-ifAKCX fizSrB")[0].contents[2].split(' às ')
+                                daytimePost = soupsp.find_all("span", class_="ad__sc-1oq8jzc-0 hSZkck sc-ifAKCX fizSrB")[0].contents[2].split(' às ')
                                 dayPost = daytimePost[0]
                                 timePost = daytimePost[1]
 
@@ -141,20 +137,14 @@ class scrap_olx_ads():
 
                             try:
 
-                                cep = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[0].contents[0]
-                                city = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[1].contents[0]
+                                cep = soupsp.find_all("dd", class_="ad__sc-1f2ug0x-1 cpGpXB sc-ifAKCX kaNiaQ")[0].contents[0]
+                                city = soupsp.find_all("dd", class_="ad__sc-1f2ug0x-1 cpGpXB sc-ifAKCX kaNiaQ")[1].contents[0]
+                                neighborhood = soupsp.find_all("dd", class_="ad__sc-1f2ug0x-1 cpGpXB sc-ifAKCX kaNiaQ")[2].contents[0]
                                                                 
                             except:
 
                                 cep = '00000000'
                                 city = 'undef'
-
-                            try:
-
-                                neighborhood = soupsp.find_all("dd", class_="sc-1f2ug0x-1 ljYeKO sc-ifAKCX kaNiaQ")[2].contents[0]
-
-                            except:
-
                                 neighborhood = 'undef'
 
 
@@ -170,7 +160,6 @@ class scrap_olx_ads():
                             for ki,kd in enumerate(self.dic_temp.keys()):
 
                                 self.dic_temp[kd].append(np.nan)
-        
 
                     except:
 
@@ -183,11 +172,12 @@ class scrap_olx_ads():
 
         return self.dic_temp
 
+
 # Referência de busca: fixie, barra forte,bike urbana, urban bike, single speed, bike speed, colossi, 8bike, fuji, trek, cannondale, specialized, Night Riders, 
 # Specialized Langster, Caloi, Aço Hi-ten, aro 700. #Caloi City Tour
 #['sense','sense%20urban','sense%20move'
 # btwin, focus, pinarello, Soul, sundown, vicinitech, gancheira horizontal, gancheira pista, aventon, miyamura, sugino, dura Ace, shimano, chandan, Raf bikes, caloi 10, caloi 12, monark 10, peugeot 10, giant, audax, tsw, groove, oggi, riva, cernnunos, república, Ferroveló, caixinha, caixa, sunburst, airwalk, black flea, ColorBikes, eight bikes, nirve belmont, Eagle bikes, foffa, cubos rolamentados, flip flop, contra pedal, quadro fixa, bicicleta.
-    # for j in ['bike%20fixa', 'raf','raf bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single','bike%20fixa']:
+# for j in ['bike%20fixa', 'raf','raf bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single','bike%20fixa']:
 
 datai = pd.DataFrame()
 
@@ -196,7 +186,7 @@ busca = scrap_olx_ads()
 
 for i in ["SP"]:
 
-    for j in ['bike%20fixa','las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli']:
+    for j in ['bike%20fixa' ,'las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli']:
 
         print(j)
         res_page = busca.initial_configs(state = i, region = "0", target_word = j)

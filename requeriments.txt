@@ -6,4 +6,3 @@
  requests
  tabulate
  virtualenv
- 

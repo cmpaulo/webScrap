@@ -52,7 +52,5 @@ The result of ads with a value lower than the average value of ads in the state 
 ![graphnumber](/images/median_price_of_bike.png)
 
 
-![graph1](/images/number_of_ads_bycity.png)
-
 ## References
 [!Freecodecamp.org - Web scraping python tutorial](https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website)

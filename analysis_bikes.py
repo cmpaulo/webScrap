@@ -2,7 +2,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
+"""
+This code is performing several data cleaning and manipulation tasks on a CSV file. It starts by reading in a file with the given name and dropping any duplicate or empty rows.
+Then, it filters the data to only include rows where the "nameBike" column contains any of the specified related words. The cleaned data is then saved to a new CSV file. 
+Additionally, it converts the "valueBike" column to a numeric data type and creates boxplots and bar charts to show statistics and information about the cleaned data. Finally, it exports the data to a markdown file.
+"""
 
 
 def clean_data(name = ""):
@@ -24,11 +28,7 @@ def related_res(data, name, related_words):
     related_words_out  = set(related_words).union(set(related_word_cap).union(set(related_word_upper)) ) 
     related_words_out  = sorted(related_words_out)
 
-    for i in data.index:
-        if any(word_i in data['nameBike'][i] for word_i in related_words_out):
-            continue
-        else:
-            data.drop(i, inplace=True)
+    data = data[data['nameBike'].apply(lambda x: any(word_i in x for word_i in related_words_out))]
 
     data.reset_index(inplace=True,drop=True)
     
@@ -73,6 +73,10 @@ if len(means) > 5:
 
     ax.barh(means.index, means.values, label='Preço médio')
     ax.axvline(means.mean(), color = 'red',ls = 'dashed', label='Preço médio no Estado de São Paulo')
+
+    for i, city in enumerate(means.index):
+        ax.text(means[city] +1, i, "n = "+str(counts_anuncios[city]))
+
     ax.set_xlim(0,ax.get_xlim()[1])
     ax.set_ylabel('Cidade')
     ax.set_xlabel('Preço médio [R$]')
@@ -92,27 +96,3 @@ plt.tight_layout()
 plt.savefig("./images/median_price_of_bike.png")
 # plt.show()
 # exit()
-
-plt.figure(figsize=(10, 7))
-ax = plt.axes()
-
-if len(means) > 5:
-
-    ax.barh(counts_anuncios.index, counts_anuncios.values, label='Número de anúncios por cidade de bike fixa no Estado de São Paulo')
-    ax.set_xlim(0,ax.get_xlim()[1])
-    ax.set_ylabel('Cidade')
-    ax.set_xlabel('Número de anúncios')
-
-else:
-    
-    ax.bar(counts_anuncios.index, counts_anuncios.values, label='Número de anúncios por cidade de bike fixa no Estado de São Paulo')
-    ax.set_ylim(0,ax.get_ylim()[1])
-    ax.set_xlabel('Cidade')
-    ax.set_ylabel('Número de anúncios')
-
-
-ax.set_title('Número de anúncios de bicicletas fixa nas cidades do Estado de São Paulo')
-
-plt.tight_layout()
-plt.savefig("./images/number_of_ads_bycity.png")
-# plt.show()

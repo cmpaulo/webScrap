@@ -1,13 +1,20 @@
 ,dayPost,timePost,codeAd,nameBike,valueBike,city,neighborhood,cep,urlBike
-0,23/01,19:45,1137446640.0,Bike fixa ,1400.0,Taubaté,Parque Aeroporto,12051360.0,https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/bike-fixa-1137446640
-1,23/01,15:47,1136930440.0,Bicicleta RAF Lina fixa ou roda livre,2500.0,São Paulo,Bela Vista,1333020.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-raf-lina-fixa-ou-roda-livre-1136930440
+0,24/01,00:03,1137532651.0,Bike fixa tam.54 com esticador de corrente,0.0,São Paulo,Campos Elíseos,1201000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-tam-54-com-esticador-de-corrente-1137532651
+1,23/01,19:45,1137446640.0,Bike fixa ,1400.0,Taubaté,Parque Aeroporto,12051360.0,https://sp.olx.com.br/vale-do-paraiba-e-litoral-norte/ciclismo/bike-fixa-1137446640
 2,22/01,18:02,1132508391.0,Bike fixa Tetrapode,980.0,Limeira,Jardim Nossa Senhora de Fátima,13482375.0,https://sp.olx.com.br/grande-campinas/ciclismo/bike-fixa-tetrapode-1132508391
-3,21/01,18:56,1136669042.0,Bicicleta fixa/single speed,1600.0,São Paulo,Bela Vista,1318000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-single-speed-1136669042
+3,20/01,21:31,1136301501.0,Bike fixa bicicleta fixa,1100.0,Sumaré,Jardim Paulistano,13174570.0,https://sp.olx.com.br/grande-campinas/ciclismo/bike-fixa-bicicleta-fixa-1136301501
 4,10/01,19:55,1131704632.0,Bicicleta fixa single gear fixed aro 26,1200.0,Campinas,Vila Marieta,13042105.0,https://sp.olx.com.br/grande-campinas/ciclismo/bicicleta-fixa-single-gear-fixed-aro-26-1131704632
-5,10/01,14:46,1131556869.0,"Caloi 10 quadro,aro 700 e freio shimano para montar fixed gear",750.0,Santa Bárbara D'Oeste,Jardim Santa Rita de Cássia,13457093.0,https://sp.olx.com.br/grande-campinas/ciclismo/caloi-10-quadro-aro-700-e-freio-shimano-para-montar-fixed-gear-1131556869
-6,08/01,16:13,1130772874.0,Bike caixinha Single/Fixa,1300.0,São Paulo,Indianópolis,4087002.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-caixinha-single-fixa-1130772874
-7,08/01,15:31,1123743039.0,Bicicleta fixa Raf Lina,3500.0,São Paulo,Parque Maria Domitila,5128000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-fixa-raf-lina-1123743039
-8,07/01,13:40,1130393803.0,Peças para bicicleta fixa Speed single,16.0,São Paulo,Vila União (Zona Leste),3683000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/pecas-para-bicicleta-fixa-speed-single-1130393803
-9,06/01,18:39,1130021223.0,Bicicleta alumínio single ou fixa Caloi,800.0,São Paulo,Jardim Santa Lucrécia,5185450.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-aluminio-single-ou-fixa-caloi-1130021223
-10,04/01,13:34,1128965095.0,Bike fixa raf 56 Nova,1699.0,São Paulo,Jardim Iguatemi,8380220.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-raf-56-nova-1128965095
-11,23/01,12:31,1136591961.0,Bike DK sprinter junior 2015,1250.0,Indaiatuba,Jardim Portal de Itaici,13340612.0,https://sp.olx.com.br/grande-campinas/ciclismo/bike-dk-sprinter-junior-2015-1136591961
+5,08/01,16:13,1130772874.0,Bike caixinha Single/Fixa,1300.0,São Paulo,Indianópolis,4087002.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-caixinha-single-fixa-1130772874
+6,07/01,13:40,1130393803.0,Peças para bicicleta fixa Speed single,16.0,São Paulo,Vila União (Zona Leste),3683000.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/pecas-para-bicicleta-fixa-speed-single-1130393803
+7,06/01,18:39,1130021223.0,Bicicleta alumínio single ou fixa Caloi,800.0,São Paulo,Jardim Santa Lucrécia,5185450.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bicicleta-aluminio-single-ou-fixa-caloi-1130021223
+8,04/01,13:34,1128965095.0,Bike fixa raf 56 Nova,1699.0,São Paulo,Jardim Iguatemi,8380220.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-raf-56-nova-1128965095
+9,02/01,22:01,1109810932.0,Bike fixa - solé bicycle ,3000.0,São Paulo,Jardim Europa,4536020.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-sole-bicycle-1109810932
+10,02/01,16:31,1110091849.0,Aventon Mataro - Trispoke clincher ,5400.0,São Paulo,Brooklin Novo,4601060.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/aventon-mataro-trispoke-clincher-1110091849
+11,02/01,10:22,1127927801.0,"Oportunidade - Bike single speed ""Caixinha"" - BAIXOU O PREÇO ",1000.0,Sorocaba,Jardim Maria do Carmo,18081145.0,https://sp.olx.com.br/regiao-de-sorocaba/ciclismo/oportunidade-bike-single-speed-caixinha-baixou-o-preco-1127927801
+12,28/12,10:02,1126484097.0,Bike fixa,550.0,Ribeirão Preto,Centro,14015110.0,https://sp.olx.com.br/regiao-de-ribeirao-preto/ciclismo/bike-fixa-1126484097
+13,27/12,19:01,1120455574.0,Bike fixa,1150.0,Campinas,Chácara Santa Margarida,13085415.0,https://sp.olx.com.br/grande-campinas/ciclismo/bike-fixa-1120455574
+14,27/12,00:52,1125997597.0,Bike fixa ,2400.0,São Paulo,Brasilândia,2845050.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-1125997597
+15,26/12,15:41,1125830217.0,Bike fixa usada,900.0,São Paulo,Santa Efigênia,1209003.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-usada-1125830217
+16,25/12,19:00,1125589457.0,Bicicleta fixa Raf Bikes - single speed vendo/troco por aro 29 ,2700.0,São José do Rio Preto,Jardim Novo Aeroporto,15035010.0,https://sp.olx.com.br/regiao-de-sao-jose-do-rio-preto/ciclismo/bicicleta-fixa-raf-bikes-single-speed-vendo-troco-por-aro-29-1125589457
+17,25/12,12:58,1125525265.0,Bike Fixa/Single 54 Triple T,1400.0,São Paulo,Vila Guilhermina,3543020.0,https://sp.olx.com.br/sao-paulo-e-regiao/ciclismo/bike-fixa-single-54-triple-t-1125525265
+18,23/01,12:31,1136591961.0,Bike DK sprinter junior 2015,1250.0,Indaiatuba,Jardim Portal de Itaici,13340612.0,https://sp.olx.com.br/grande-campinas/ciclismo/bike-dk-sprinter-junior-2015-1136591961

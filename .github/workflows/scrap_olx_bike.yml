@@ -29,9 +29,6 @@ jobs:
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run: python scrap_olx_bike_v1_1.py
       
-      - name: execute py script for analysis # analyse datas
-        run: python analysis_bikes.py
-          
       - name: commit files
         run: |
           git config --local user.email "action@github.com"

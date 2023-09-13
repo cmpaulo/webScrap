@@ -3,6 +3,8 @@
 the page and find the desired elements. It saves the collected information in a dictionary "data" that includes the day and time the ad was posted, the ad's code, the bike's name, the price, the city, 
 the neighborhood, the zip code and the ad's URL. It also checks if the ad code has already been collected before to avoid duplicates.
 """
+"september, 13, 2023"
+"This code has been discontinued because the website changed the way it presents advertisements, necessitating an update in the technique for retrieving ads and values for this site."
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
@@ -40,7 +42,9 @@ class scrap_olx_ads():
             "sec-fetch-site" : "same-origin",
             "sec-fetch-user" : "?1",
             "upgrade-insecure-requests":"1",
-            "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36",
+            "X-NewRelic-ID":"VQYGVF5SCBAJVlFaAQIH",
+            "X-Requested-With":"XMLHttpRequest"
         }
 
         page = requests.get(url=self.url, headers=self.PARAMS)
@@ -64,8 +68,9 @@ class scrap_olx_ads():
 
         try:
 
-            nRes = soup.find_all("span", class_="sc-1mi5vq6-0 dQbOE sc-ifAKCX lgjPoE")[0].contents[0]
-
+            # nRes = soup.find_all("span", class_="sc-1mi5vq6-0 dQbOE sc-ifAKCX lgjPoE")[0].contents[0]
+            nRes = soup.find_all("p", class_="sc-bqiRlB dZqfhU")[0].contents[0]
+            
             if 'resultados' in nRes:
 
                 tpages = int( int( nRes.split(" ")[-2].replace(".","") ) / 50 )
@@ -86,88 +91,93 @@ class scrap_olx_ads():
 
             res_page = requests.get(url=self.url.replace('?',f'?o={ipages}&'), headers=self.PARAMS)
             soup = BeautifulSoup(res_page.content, 'lxml')
+            
+            maindiv = soup.find_all("div", {"class": "sc-bb3a36b6-0 bPPSiI renderIfVisible"})
+            
+            for itens in maindiv:
 
-            for itens in soup.find_all("ul", {"class": "sc-1fcmfeb-1 kntIvV"}):
+                nBike = itens.find("h2")
+                if nBike != None:
+                    nameBike = nBike.text
+                else:
+                    nameBike = " "
 
-                for item in itens.find_all("li"):
+                for item in itens.find_all("a"):
 
                     try:
+
+                        urlBike = item['href']
+                        codeAd = urlBike.split('-')[-1]
                         
-                        nameBike = item.find_all('h2')[0].contents[0]
-                                                
-                        try:
-
-                            urlBike = item.find('a')['href']
-                            codeAd = urlBike.split('-')[-1]
-
-                        except:
-
-                            codeAd = ' '
-                        
-                        # remove duplicates during the scrapping ads.
-                        if codeAd is self.base_codes or codeAd == ' ':
-                            continue
-
-                        try: #open ads and get informations enter on ads and get price
-                            
-                            page2 = requests.get(url=urlBike, headers=self.PARAMS)
-                            soupsp = BeautifulSoup(page2.content, 'lxml')
-
-                            try:
-                                # converting from BR presentation of numbers
-                                # ad__sc-1wimjbb-1 hoHpcC sc-drMfKT ghWwwU
-                                # sc-1wimjbb-2 iUSogS sc-ifAKCX cmFKIN
-                                valueBike = soupsp.find_all("h2", class_="ad__sc-1wimjbb-1 hoHpcC sc-cooIXK cXlgiS")[0].contents[0].split("R$ ")[1].replace('.','')
-                                valueBike = float(valueBike)
-
-                            except:
-
-                                valueBike = 0.0
-
-                            try:
-
-                                daytimePost = soupsp.find_all("span", class_="ad__sc-1oq8jzc-0 hSZkck sc-ifAKCX fizSrB")[0].contents[2].split(' às ')
-                                dayPost = daytimePost[0]
-                                timePost = daytimePost[1]
-
-                            except:
-
-                                dayPost = ' '
-                                timePost = ' '
-
-                            try:
-
-                                cep = soupsp.find_all("dd", class_="ad__sc-1f2ug0x-1 cpGpXB sc-ifAKCX kaNiaQ")[0].contents[0]
-                                city = soupsp.find_all("dd", class_="ad__sc-1f2ug0x-1 cpGpXB sc-ifAKCX kaNiaQ")[1].contents[0]
-                                neighborhood = soupsp.find_all("dd", class_="ad__sc-1f2ug0x-1 cpGpXB sc-ifAKCX kaNiaQ")[2].contents[0]
-                                                                
-                            except:
-
-                                cep = '00000000'
-                                city = 'undef'
-                                neighborhood = 'undef'
-
-
-                            objct_list = [dayPost,timePost,codeAd,nameBike,valueBike,city,neighborhood,cep,urlBike]
-                            
-                            for ki,kd in enumerate(self.dic_temp.keys()):
-                                
-                                self.dic_temp[kd].append(objct_list[ki])
-                       
-                        except:
-                            print("Not link of found ads.")
-
-                            for ki,kd in enumerate(self.dic_temp.keys()):
-
-                                self.dic_temp[kd].append(np.nan)
 
                     except:
 
-                        print("Not found ads.")
+                        codeAd = ' '
+                    
+                    # remove duplicates during the scrapping ads.
+                    if codeAd is self.base_codes or codeAd == ' ':
+                        continue
+                    
+                    try: #open ads and get informations enter on ads and get price
+                        
+                        page2 = requests.get(url=urlBike, headers=self.PARAMS)
+                        soupsp = BeautifulSoup(page2.content, 'lxml')
+
+                        try:
+                            # converting from BR presentation of numbers
+                            # valueBike = soupsp.find_all("h2", class_="ad__sc-12l420o-1 dnbBJL sc-jTzLTM iyLIyP")[0].contents[0]
+                            valueBike = soupsp.find("span", class_="ad__sc-1wimjbb-1 hoHpcC sc-jTzLTM kNahTW").text.split("R$ ")[1].replace('.','')
+                            valueBike = float(valueBike)
+
+                        except:
+
+                            valueBike = 0.0
+                            
+                        try:
+
+                            daytimePost = soupsp.find("span", class_="ad__sc-1oq8jzc-0 dWayMW sc-jTzLTM iGzcjb").text.split(' às ')
+                            dayPost = daytimePost[0][-5:]
+                            timePost = daytimePost[1]
+                            
+                        except:
+
+                            dayPost = ' '
+                            timePost = ' '
+                        try:
+
+                            objectLocat = soupsp.find_all("span", class_="ad__sc-1f2ug0x-1 cpGpXB sc-jTzLTM ieZUgc")
+                            vararr = []
+                            ij=0
+                            while ij < len(objectLocat):
+                                ao = objectLocat[ij].text
+                                vararr.append(ao)
+                                ij=ij+1
+                                 
+                            cep , city , neighborhood = vararr
+                                                            
+                        except:
+
+                            cep = '00000000'
+                            city = 'undef'
+                            neighborhood = 'undef'
+
+                        objct_list = [dayPost,timePost,codeAd,nameBike,valueBike,city,neighborhood,cep,urlBike]
+                        
+                        for ki,kd in enumerate(self.dic_temp.keys()):
+                            
+                            self.dic_temp[kd].append(objct_list[ki])
+                    
+                    except:
+                        print("Not link of found ads.")
 
                         for ki,kd in enumerate(self.dic_temp.keys()):
 
                             self.dic_temp[kd].append(np.nan)
+
+
+                    for ki,kd in enumerate(self.dic_temp.keys()):
+
+                        self.dic_temp[kd].append(np.nan)
         
 
         return self.dic_temp
@@ -182,11 +192,12 @@ class scrap_olx_ads():
 datai = pd.DataFrame()
 
 busca = scrap_olx_ads()
+    # for j in ['bike%20fixa' ,'las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli']:
 
 
 for i in ["SP"]:
 
-    for j in ['bike%20fixa' ,'las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli']:
+    for j in ['bike%20fixa']:
 
         print(j)
         res_page = busca.initial_configs(state = i, region = "0", target_word = j)

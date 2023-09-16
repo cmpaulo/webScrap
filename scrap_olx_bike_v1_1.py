@@ -192,12 +192,11 @@ class scrap_olx_ads():
 datai = pd.DataFrame()
 
 busca = scrap_olx_ads()
-    # for j in ['bike%20fixa' ,'las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli']:
 
 
 for i in ["SP"]:
 
-    for j in ['bike%20fixa']:
+    for j in ['bike%20fixa' ,'las%20magrelas', 'raf','raf%20bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli']:
 
         print(j)
         res_page = busca.initial_configs(state = i, region = "0", target_word = j)

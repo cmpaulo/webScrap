@@ -2,6 +2,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import datetime
+
 """
 This code is performing several data cleaning and manipulation tasks on a CSV file. It starts by reading in a file with the given name and dropping any duplicate or empty rows.
 Then, it filters the data to only include rows where the "nameBike" column contains any of the specified related words. The cleaned data is then saved to a new CSV file. 
@@ -14,9 +16,11 @@ def clean_data(name = ""):
     data = pd.read_csv(name, index_col='Unnamed: 0',header=0)
 
     data = data.drop_duplicates(keep='last').dropna()
-
     data.reset_index(inplace=True,drop=True)
-
+    
+    tagtime = datetime.datetime.now().strftime("%Y%m%d_%H%M")
+    data.to_csv(f"{name.replace('.csv', '')}_{tagtime}.csv")
+    
     return data, name
 
 
@@ -32,7 +36,8 @@ def related_res(data, name, related_words):
 
     data.reset_index(inplace=True,drop=True)
     
-    data.to_csv('{}'.format(name.replace(".csv",'_clean.csv')))
+    data.to_csv(name.replace('.csv','_clean.csv'))
+    
     
     return data
 

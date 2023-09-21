@@ -2,9 +2,9 @@
 [![scraper-ads](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml/badge.svg?branch=main)](https://github.com/cmpaulo/webScrap/actions/workflows/scrap_olx_bike.yml)
 
 <!-- ingles -->
-This code is scraping the OLX website for ads that contain the keyword "fixie" in the São Paulo region and collecting information about the ads found. It uses the BeautifulSoup library to navigate the HTML structure of 
-the page and find the desired elements. It saves the collected information in a dictionary "data" that includes the day and time the ad was posted, the ad's code, the bike's name, the price, the city, 
-the neighborhood, the zip code and the ad's URL. It also checks if the ad code has already been collected before to avoid duplicates.
+I developed an application to simplify the search for bicycle ads, enhancing it with statistical analysis using Python and pandas. With this, I was able to calculate average values and price quartiles, while also creating interactive charts to visualize price variations in different cities in São Paulo. This initiative showcases my technical skills in Python, pandas, and statistics, as well as the ability to make GET requests using the requests library and interpret HTML and CSS code. Furthermore, I leveraged my experience with the BeautifulSoup tool for web data scraping and used Pandas for data analysis. This product makes the search for bicycle ads more efficient and assists in fair price evaluation. With this application, I have created a valuable resource for bicycle enthusiasts and potential buyers.
+
+This code is scraping the OLX website for ads that contain the keyword "fixie" in the São Paulo region and collecting information about the ads found. It uses the BeautifulSoup library to navigate the HTML structure of the page and find the desired elements. It saves the collected information in a dictionary "data" that includes the day and time the ad was posted, the ad's code, the bike's name, the price, the city, the neighborhood, the zip code and the ad's URL. It also checks if the ad code has already been collected before to avoid duplicates.
 
 
 # WebScraping first step.

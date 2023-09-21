@@ -154,6 +154,11 @@ class scrap_olx_ads():
                                 ij=ij+1
                                  
                             cep , city , neighborhood = vararr
+                            
+                            if cep == '': cep = '00000000'
+                            if city == '': cep = 'undef'
+                            if neighborhood == '': cep = 'undef'
+                            
                                                             
                         except:
 

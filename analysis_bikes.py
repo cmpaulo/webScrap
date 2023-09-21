@@ -14,11 +14,16 @@ Additionally, it converts the "valueBike" column to a numeric data type and crea
 def clean_data(name = ""):
 
     data = pd.read_csv(name, index_col='Unnamed: 0',header=0)
-
-    data = data.drop_duplicates(keep='last').dropna()
+    print(data)
+    data.drop_duplicates(keep='first', inplace=True, ignore_index=True)
+    
+    data = data.dropna()
+    
     data.reset_index(inplace=True,drop=True)
+    print(data)
     
     tagtime = datetime.datetime.now().strftime("%Y%m%d_%H%M")
+    data['update'] = [tagtime]*len(data)
     data.to_csv(f"{name.replace('.csv', '')}_{tagtime}.csv")
     
     return data, name
@@ -44,6 +49,7 @@ def related_res(data, name, related_words):
 
 data, name = clean_data('busca_bike_dados.csv')
 
+exit()
 # clean data
 # if len(data) > 500:
 

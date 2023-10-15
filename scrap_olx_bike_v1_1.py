@@ -155,14 +155,14 @@ class scrap_olx_ads():
                                  
                             cep , city , neighborhood = vararr
                             
-                            if cep == '': cep = '00000000'
-                            if city == '': cep = 'undef'
-                            if neighborhood == '': cep = 'undef'
+                            if cep == '' or cep == np.nan: cep = '0000000'
+                            if city == '': city = 'nocity'
+                            if neighborhood == '': neighborhood = 'nonbrh'
                             
                                                             
                         except:
 
-                            cep = '00000000'
+                            cep = 'undef'
                             city = 'undef'
                             neighborhood = 'undef'
 
@@ -195,7 +195,7 @@ class scrap_olx_ads():
 # for j in ['bike%20fixa', 'raf','raf bike','sprinter','8bike', 'fixie', 'nexus','tetrapode', 'alleycat','cernunnos','chandan','fixed','aventon','riva','cinelli','single','bike%20fixa']:
 
 datai = pd.DataFrame()
-
+import datetime
 busca = scrap_olx_ads()
 
 
@@ -218,9 +218,10 @@ for i in ["SP"]:
 
 
 if len(datai) > 0:
-
+    tagtime = datetime.datetime.today().strftime("%Y-%m-%d %H:%M")
+    datai['update'] = [tagtime]*len(datai)
     datai.to_csv(f'busca_bike_dados.csv')
-    print(f'tamanho do dataframe {len(datai)}')
+    print(f'DataFrame lenght: {len(datai)}')
 
 else:
 

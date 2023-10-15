@@ -14,16 +14,17 @@ Additionally, it converts the "valueBike" column to a numeric data type and crea
 def clean_data(name = ""):
 
     data = pd.read_csv(name, index_col='Unnamed: 0',header=0)
-    print(data)
     data.drop_duplicates(keep='first', inplace=True, ignore_index=True)
+    data['cep'] = data['cep'].fillna(0.0)
     
     data = data.dropna()
     
     data.reset_index(inplace=True,drop=True)
-    print(data)
+    # print(data)
     
     tagtime = datetime.datetime.now().strftime("%Y%m%d_%H%M")
     data['update'] = [tagtime]*len(data)
+    
     data.to_csv(f"{name.replace('.csv', '')}_{tagtime}.csv")
     
     return data, name
@@ -42,14 +43,13 @@ def related_res(data, name, related_words):
     data.reset_index(inplace=True,drop=True)
     
     data.to_csv(name.replace('.csv','_clean.csv'))
-    
-    
+        
     return data
 
 
 data, name = clean_data('busca_bike_dados.csv')
 
-exit()
+# exit()
 # clean data
 # if len(data) > 500:
 
@@ -70,11 +70,11 @@ if len (data_clean) > 0:
 
     dataK = data[(data['valueBike'] > caplow) & (data['valueBike'] < captop)]
 
-    means = dataK[["city","valueBike"]].groupby('city').mean().sort_values('valueBike',ascending=False)
-    
+    means = dataK.loc[:,["city","valueBike"]].groupby('city').mean().sort_values('valueBike',ascending=False)
+
     if len(dataK) > 10:
         Lower_mean_ads = dataK.sort_values('valueBike',ascending=False)
-        ads = Lower_mean_ads[Lower_mean_ads['valueBike'].values < means.mean()]
+        ads = Lower_mean_ads[Lower_mean_ads['valueBike'].values < means['valueBike'].mean()]
         ads_mkdw = ads.loc[:,['dayPost', 'nameBike', 'city','valueBike','urlBike']]
         ads_mkdw.to_markdown('{}'.format(name.replace(".csv",'.md')),index=False)
         
@@ -91,31 +91,33 @@ if len (data_clean) > 0:
 
     if len(means) > 5:
 
-        ax.barh(means.index, means.values, label='Preço médio')
-        ax.axvline(means.mean(), color = 'red',ls = 'dashed', label='Preço médio no Estado de São Paulo')
-
+        ax.barh(means.index, means['valueBike'].values, label='Preço médio')
+        
         for i, city in enumerate(means.index):
-            ax.text(means[city] +1, i, "n = "+str(counts_anuncios[city]))
+            ax.text(means.loc[city,:] + 1, i, "n = "+str(counts_anuncios[city]))
 
         ax.set_xlim(0,ax.get_xlim()[1])
+        ax.text(means['valueBike'].mean()+50,ax.get_ylim()[0], f"Atualizado em {pd.Timestamp.today().date()}")
+        ax.axvline(means['valueBike'].mean(), color = 'red',ls = 'dashed', label=f'R$ {means["valueBike"].mean():.2f}, Preço médio no Estado de São Paulo')
+        
         ax.set_ylabel('Cidade')
         ax.set_xlabel('Preço médio [R$]')
 
     else:
 
         ax.bar(means.index, means["valueBike"].values, label='Preço médio')
-        ax.axhline(means['valueBike'].mean(), color = 'red',ls = 'dashed', label='Preço médio no Estado de São Paulo')
-        ax.set_ylim(0,ax.get_ylim()[1])
+        # ax.set_ylim(0,ax.get_ylim()[1])
         ax.set_xlabel('Cidade')
         ax.set_ylabel('Preço médio [R$]')
+        # ax.text(ax.get_ylim()[0],means['valueBike'].mean()+50, f"Atualizado em {pd.Timestamp.today().date()}")
     
-    ax.text(means.index[-1],means['valueBike'].mean()+50, f"Atualizado em {pd.Timestamp.today().date()}")
+    # ax.axhline(means['valueBike'].mean(), color = 'red',ls = 'dashed', label=f'R$ {means["valueBike"].mean():.2f}, Preço médio no Estado de São Paulo')
     ax.set_title('Valor médio e o número de anúncios para as bicicletas fixa em cidades do Estado de São Paulo')
 
     plt.legend()
     plt.tight_layout()
     plt.savefig("./images/median_price_of_bike.png")
-    # plt.show()
+    plt.show()
 else:
     print("no related results or dataframe to small")
     

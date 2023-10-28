@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import datetime
+import glob
+import os
 
 """
 This code is performing several data cleaning and manipulation tasks on a CSV file. It starts by reading in a file with the given name and dropping any duplicate or empty rows.
@@ -11,23 +13,29 @@ Additionally, it converts the "valueBike" column to a numeric data type and crea
 """
 
 
-def clean_data(name = ""):
+def clean_data(names = ""):
+    
+    list_files = glob.glob(names)
+    
+    list_files = sorted(list_files)
+    list_dfs = []
+    for i in list_files:
+        data = pd.read_csv(i, index_col='Unnamed: 0',header=0)
+        os.remove(i)        
+        data = data.dropna()
+        
+        list_dfs.append(data)
+        
+        
+    scrp_files = pd.concat(list_dfs)
 
-    data = pd.read_csv(name, index_col='Unnamed: 0',header=0)
-    data.drop_duplicates(keep='first', inplace=True, ignore_index=True)
-    data['cep'] = data['cep'].fillna(0.0)
-    
-    data = data.dropna()
-    
-    data.reset_index(inplace=True,drop=True)
-    # print(data)
-    
+    scrp_files.reset_index(inplace=True,drop=True)
+        # print(data)
     tagtime = datetime.datetime.now().strftime("%Y%m%d_%H%M")
-    data['update'] = [tagtime]*len(data)
-    
-    data.to_csv(f"{name.replace('.csv', '')}_{tagtime}.csv")
-    
-    return data, name
+        
+    scrp_files.to_csv(f"busca_bike_dados_{tagtime}.csv")
+        
+    return scrp_files, names
 
 
 
@@ -42,12 +50,12 @@ def related_res(data, name, related_words):
 
     data.reset_index(inplace=True,drop=True)
     
-    data.to_csv(name.replace('.csv','_clean.csv'))
+    data.to_csv(name.replace('*.csv','_clean.csv'))
         
     return data
 
 
-data, name = clean_data('busca_bike_dados.csv')
+data, name = clean_data('busca_bike_dados_*.csv')
 
 # exit()
 # clean data
@@ -76,11 +84,11 @@ if len (data_clean) > 0:
         Lower_mean_ads = dataK.sort_values('valueBike',ascending=False)
         ads = Lower_mean_ads[Lower_mean_ads['valueBike'].values < means['valueBike'].mean()]
         ads_mkdw = ads.loc[:,['dayPost', 'nameBike', 'city','valueBike','urlBike']]
-        ads_mkdw.to_markdown('{}'.format(name.replace(".csv",'.md')),index=False)
+        ads_mkdw.to_markdown('{}'.format(name.replace("*.csv",'.md')),index=False)
         
     else:
         ads_mkdw = dataK.loc[:,['dayPost', 'nameBike', 'city','valueBike','urlBike']]
-        ads_mkdw.to_markdown('{}'.format(name.replace(".csv",'.md')),index=False)
+        ads_mkdw.to_markdown('{}'.format(name.replace("*.csv",'.md')),index=False)
 
     counts_anuncios = dataK.groupby('city').count().sort_values('valueBike',ascending=False)['valueBike']
 

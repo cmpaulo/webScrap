@@ -21,7 +21,8 @@ def clean_data(names = ""):
     list_dfs = []
     for i in list_files:
         data = pd.read_csv(i, index_col='Unnamed: 0',header=0)
-        os.remove(i)        
+        os.remove(i)
+        names = i        
         data = data.dropna()
         
         list_dfs.append(data)
@@ -57,7 +58,6 @@ def related_res(data, name, related_words):
 
 data, name = clean_data('busca_bike_dados_*.csv')
 
-# exit()
 # clean data
 # if len(data) > 500:
 
@@ -69,27 +69,36 @@ data, name = clean_data('busca_bike_dados_*.csv')
 
 data_clean = data.copy()
 
+
 if len (data_clean) > 0:
     data_clean['valueBike'] = pd.to_numeric(data_clean['valueBike'].values)
+    data_clean['update'] = pd.to_datetime(data_clean['update'],format="%Y%m%d_%H%M")
     # # metrics
     metrica = plt.boxplot(data_clean['valueBike'])
     captop = metrica['caps'][1].get_ydata()[0]
     caplow = metrica['caps'][0].get_ydata()[0]
 
-    dataK = data[(data['valueBike'] > caplow) & (data['valueBike'] < captop)]
+    dataK = data_clean[(data_clean['valueBike'] > caplow) & (data_clean['valueBike'] < captop)]
 
     means = dataK.loc[:,["city","valueBike"]].groupby('city').mean().sort_values('valueBike',ascending=False)
 
     if len(dataK) > 10:
         Lower_mean_ads = dataK.sort_values('valueBike',ascending=False)
-        ads = Lower_mean_ads[Lower_mean_ads['valueBike'].values < means['valueBike'].mean()]
+        bollowmean_last15days = ((Lower_mean_ads['valueBike'].values < means['valueBike'].mean()) & (Lower_mean_ads.loc[:,'update'] > (datetime.datetime.now()-datetime.timedelta(days=15.0))))
+        ads = dataK.loc[bollowmean_last15days,:]
         ads_mkdw = ads.loc[:,['dayPost', 'nameBike', 'city','valueBike','urlBike']]
-        ads_mkdw.to_markdown('{}'.format(name.replace("*.csv",'.md')),index=False)
+        ads_mkdw = ads_mkdw.drop_duplicates(keep='last')
+   
+        filename = ''.join(x for x in name if x.isalpha() or x == "_")
+        ads_mkdw.to_markdown('{}'.format(filename.replace("__csv",'.md')),index=False)
         
     else:
+        
         ads_mkdw = dataK.loc[:,['dayPost', 'nameBike', 'city','valueBike','urlBike']]
-        ads_mkdw.to_markdown('{}'.format(name.replace("*.csv",'.md')),index=False)
-
+        
+        filename = ''.join(x for x in name if x.isalpha() or x == "_")
+        ads_mkdw.to_markdown('{}'.format(filename.replace("__csv",'.md')),index=False)
+        
     counts_anuncios = dataK.groupby('city').count().sort_values('valueBike',ascending=False)['valueBike']
 
     # plot
@@ -125,7 +134,7 @@ if len (data_clean) > 0:
     plt.legend()
     plt.tight_layout()
     plt.savefig("./images/median_price_of_bike.png")
-    plt.show()
+    # plt.show()
 else:
     print("no related results or dataframe to small")
     

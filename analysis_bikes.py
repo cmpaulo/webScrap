@@ -115,7 +115,7 @@ if len (data_clean) > 0:
 
         ax.set_xlim(0,ax.get_xlim()[1])
         ax.text(means['valueBike'].mean()+50,ax.get_ylim()[0], f"Atualizado em {pd.Timestamp.today().date()}")
-        ax.axvline(means['valueBike'].mean(), color = 'red',ls = 'dashed', label=f'R$ {means["valueBike"].mean():.2f}, Preço médio no Estado de São Paulo')
+        ax.axvline(means['valueBike'].mean(), color = 'red',ls = 'dashed', label=f'R$ {means["valueBike"].mean():.2f}, Average price in the State of São Paulo')
         
         ax.set_ylabel('Cidade')
         ax.set_xlabel('Preço médio [R$]')

@@ -10,7 +10,6 @@ import numpy as np
 import pandas as pd
 import requests
 
-
 class scrap_olx_ads():
 
     
@@ -31,7 +30,9 @@ class scrap_olx_ads():
         else:
             self.url = f"https://{state}.olx.com.br/{regionBuscar[region]}/ciclismo?q={target_word}&sf=1"
             
-
+        user_agents_list = ['Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',
+                            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36',
+                            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36' ]
         self.PARAMS = {
             "authority" : "sp.olx.com.br",
             "method": "GET",
@@ -42,13 +43,13 @@ class scrap_olx_ads():
             "sec-fetch-site" : "same-origin",
             "sec-fetch-user" : "?1",
             "upgrade-insecure-requests":"1",
-            "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36",
+            "User-Agent": np.random.choice(user_agents_list),
             "X-NewRelic-ID":"VQYGVF5SCBAJVlFaAQIH",
             "X-Requested-With":"XMLHttpRequest"
         }
 
         page = requests.get(url=self.url, headers=self.PARAMS)
-    
+
         if (page.status_code != 200):
 
             print('Remote problem', 'code status ', page.status_code)
@@ -68,7 +69,6 @@ class scrap_olx_ads():
 
         try:
 
-            # nRes = soup.find_all("span", class_="sc-1mi5vq6-0 dQbOE sc-ifAKCX lgjPoE")[0].contents[0]
             nRes = soup.find_all("p", class_="sc-bqiRlB dZqfhU")[0].contents[0]
             
             if 'resultados' in nRes:
@@ -91,6 +91,8 @@ class scrap_olx_ads():
 
             res_page = requests.get(url=self.url.replace('?',f'?o={ipages}&'), headers=self.PARAMS)
             soup = BeautifulSoup(res_page.content, 'lxml')
+            
+            # mainScript = soup.find("id", {"id":"__NEXT_DATA__"}) # need to test
             
             maindiv = soup.find_all("div", {"class": "sc-bb3a36b6-0 bPPSiI renderIfVisible"})
             
